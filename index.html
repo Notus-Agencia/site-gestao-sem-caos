@@ -1335,7 +1335,7 @@ button.link-arrow{border:0;background:none;padding:0;cursor:pointer;font-size:in
 .rot.out{opacity:0;translate:0 -6px}
 @media (max-width:860px){.hero-q{max-width:none}}
 
-/* jornada da consultora: a linha vai de um card ao outro e cada um acende na vez */
+/* jornada da consultoria: a linha vai de um card ao outro e cada um acende na vez */
 .chain-s::after{content:"";position:absolute;top:39px;left:100%;width:16px;height:2px;background:var(--o2);transform:scaleX(0);transform-origin:left center;pointer-events:none}
 .chain-s:last-child::after{display:none}
 .chain-s::before{content:"";position:absolute;top:35px;left:calc(100% + 6px);width:10px;height:10px;border-radius:50%;background:var(--o1);opacity:0;pointer-events:none}
@@ -1697,7 +1697,7 @@ button.link-arrow{border:0;background:none;padding:0;cursor:pointer;font-size:in
   </div>
 </section>
 
-<!-- ============ TESE: o olhar de uma consultora, todo dia ============ -->
+<!-- ============ TESE: o olhar de uma consultoria, todo dia ============ -->
 <section class="sec tese" id="tese" aria-labelledby="h-tese">
   <div class="wrap">
     <div class="sec-head mo-stagger">
@@ -2683,7 +2683,7 @@ var PRODUTO='Cedo';
 
 
 <script>
-/* jornada da consultora: anima toda vez que a sequência entra inteira na tela */
+/* jornada da consultoria: anima toda vez que a sequência entra inteira na tela */
 (function(){
   var c=document.querySelector('.chain');if(!c||!('IntersectionObserver' in window))return;
   if(!matchMedia('(prefers-reduced-motion: no-preference)').matches){c.classList.add('go');return}
