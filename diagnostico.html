@@ -3,16 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Diagnóstico grátis · Gestão Sem Caos para clínicas</title>
-<meta name="description" content="6 perguntas, 2 minutos: descubra se a sua clínica está pronta para a Leitura diária. Resultado na hora e cópia no seu e-mail.">
+<title>Diagnóstico Cedo · Sua clínica está pronta? | Gestão Sem Caos</title>
+<meta name="description" content="6 perguntas, 2 minutos: descubra se a sua clínica de estética está pronta para a Leitura diária do Cedo. Resultado na hora e cópia no seu e-mail.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gestão Sem Caos">
-<meta property="og:title" content="Diagnóstico grátis: a sua clínica está pronta?">
-<meta property="og:description" content="6 perguntas, 2 minutos. Resultado na hora e cópia no seu e-mail.">
-<meta property="og:url" content="https://bi.gestaosemcaos.com.br/diagnostico.html">
-<link rel="canonical" href="https://bi.gestaosemcaos.com.br/diagnostico.html">
-<meta name="theme-color" content="#0B1A2B">
+<meta property="og:title" content="Diagnóstico Cedo: a sua clínica está pronta para a Leitura diária?">
+<meta property="og:description" content="6 perguntas, 2 minutos. Resultado na hora e cópia no seu e-mail. Para clínicas de estética médica.">
+<meta property="og:url" content="https://appcedo.gestaosemcaos.com.br/diagnostico.html">
+<link rel="canonical" href="https://appcedo.gestaosemcaos.com.br/diagnostico.html">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1A2B" media="(prefers-color-scheme: dark)">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='78 472 138 136'%3E%3Cpath fill='%23F2752E' d='M212.1,545.4l-39.2,3.7,29.6,26.2c-3.6,5-2.3,3.2-5.9,8.2l-33.9-20.2,8.6,38.7c-5.8,1.9-3.7,1.2-9.5,3.1l-12.5-29.2,20.3-47.1,3.5-8.1-8.8.9-50.5,5.2-23.9-21.2c3.6-5,2.3-3.2,5.9-8.2l33.9,20.2-8.6-38.7c5.8-1.9,3.7-1.2,9.5-3.1l15.6,36.4,15.6-36.4c5.8,1.9,3.7,1.2,9.5,3.1l-8.7,38.7,33.9-20.2c3.6,5,2.3,3.2,5.9,8.2l-29.6,26.2,39.2,3.7v10.1Z'/%3E%3Cpolygon fill='%23FCBA75' points='119.1 531.3 80.8 535.3 80.8 545.4 120 549 86 578.9 91.9 587.1 130.2 563.2 121.6 601.8 131.1 604.9 146.5 569.2 164.8 526.6 119.1 531.3'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,51 +26,41 @@
   --o1:#F24505; --o2:#F2752E; --o3:#FF9E40; --peach:#FCBA75; --cream:#FFF4EC;
   --n0:#07121F; --n1:#0B1A2B; --n2:#122940; --n3:#1A3552; --n4:#24446A; --n5:#334F73;
 
-  /* superfícies e texto */
-  --bg:#FFFFFF; --bg-2:#F7F7F7; --surface:#FFFFFF; --surface-2:#F5F7FA; --surface-3:#E8EDF4;
-  --ink:#122940; --ink-2:#334F73; --muted:#5B6B80; --tone:#73839A;
-  --line:rgba(18,41,64,.10); --line-2:rgba(18,41,64,.18);
-  --cta:#D43A03; --cta-h:#B53101; --on-cta:#FFFFFF;
-  --accent:#F24505; --accent-ink:#B23002; --accent-soft:rgba(242,69,5,.10);
-  --bar:#C7D2E0; --bar-2:#7F94B0; --bar-ink:#334F73;
-  --warn:#C27400; --warn-soft:rgba(214,138,0,.14); --ok:#17794A; --ok-soft:rgba(23,121,74,.13); --on-ok:#FFFFFF;
-  --heat-lo:#EEF1F6; --heat-hi:#122940; --heat-k:.42;
-  --glass:rgba(255,255,255,.78);
+  /* superfícies e texto: branco puro, cinzas neutros (sem azul), navy como tinta */
+  --bg:#FFFFFF; --bg-2:#FAFAF9; --surface:#FFFFFF; --surface-2:#F7F6F4; --surface-3:#EDECE9;
+  --ink:#122940; --ink-2:#3B4653; --muted:#716E69; --tone:#8A8782;
+  --line:rgba(20,20,20,.08); --line-2:rgba(20,20,20,.14);
+  /* ação: laranja vivo da marca, sólido; texto preto sobre o laranja, como no BI (4,9:1) */
+  --cta:#F24505; --cta-h:#D93E04; --on-cta:#141414;
+  --accent:#F24505; --accent-ink:#C43803; --accent-soft:#FFF1EA;
+  /* chip: pêssego sólido com texto navy (8,8:1); único lugar do pêssego */
+  --chip:#FCBA75; --chip-ink:#122940;
+  --bar:#E6E4E0; --bar-2:#122940; --bar-ink:#122940;
+  --warn:#A85D00; --warn-soft:#FFF4E0; --ok:#1E7A46; --ok-soft:#E3F3E8; --on-ok:#FFFFFF;
 
-  /* degradês */
-  --grad-cta:#D43A03;
-  --grad-cta-h:#B53101;
-  --grad-ember:#F2752E;
-  --grad-sun:#F2752E;
-  --grad-navy:#122940;
-  --grad-tint:#FFFFFF;
-  --grad-page:#FFFFFF;
-  --grad-hair:rgba(242,117,46,.45);
-  --grad-border:rgba(18,41,64,.16);
+  /* cores chapadas (nomes antigos mantidos; nada aqui é degradê) */
+  --grad-cta:var(--cta); --grad-cta-h:var(--cta-h); --grad-ember:#F24505;
+  --grad-navy:#122940; --grad-tint:#FFFFFF; --grad-page:#FFFFFF;
+  --grad-hair:rgba(20,20,20,.12); --grad-border:rgba(20,20,20,.12);
 
-  /* brilhos radiais */
-  --glow-peach:radial-gradient(closest-side,rgba(255,158,64,.32),rgba(252,186,117,.12) 55%,transparent);
-  --glow-orange:radial-gradient(closest-side,rgba(242,69,5,.22),transparent);
-  --glow-navy:radial-gradient(closest-side,rgba(51,79,115,.24),transparent);
-  --glow-on-navy:radial-gradient(closest-side,rgba(242,117,46,.30),rgba(255,158,64,.08) 60%,transparent);
+  /* brilhos radiais: desligados (regra do dono) */
+  --glow-peach:none; --glow-orange:none; --glow-navy:none; --glow-on-navy:none;
 
-  /* sombras com cor */
-  --sh-1:0 1px 2px rgba(18,41,64,.08),0 3px 10px -2px rgba(18,41,64,.09);
-  --sh-2:0 1px 2px rgba(18,41,64,.08),0 14px 34px -8px rgba(18,41,64,.22),0 4px 12px -6px rgba(51,79,115,.16);
-  --sh-3:0 2px 6px rgba(18,41,64,.10),0 30px 60px -18px rgba(18,41,64,.40),0 70px 120px -40px rgba(51,79,115,.38);
-  --sh-o-1:0 2px 6px -2px rgba(18,41,64,.20);
-  --sh-o-2:0 4px 12px -4px rgba(18,41,64,.24);
-  --sh-o-3:0 8px 18px -6px rgba(18,41,64,.28);
-  --rim:0 0 0 0 transparent;
-  --rim-navy:0 0 0 0 transparent;
+  /* sombras discretas e neutras: a profundidade vem da borda fina */
+  --sh-1:0 1px 2px rgba(20,20,20,.04);
+  --sh-2:0 1px 2px rgba(20,20,20,.04),0 8px 24px -12px rgba(20,20,20,.12);
+  --sh-3:0 2px 4px rgba(20,20,20,.04),0 24px 48px -24px rgba(20,20,20,.18);
+  --sh-o-1:0 1px 2px rgba(20,20,20,.08);
+  --sh-o-2:0 2px 6px rgba(20,20,20,.10);
+  --sh-o-3:0 2px 6px rgba(20,20,20,.10);
 
   /* forma e ritmo */
-  --r-sm:12px; --r:16px; --r-lg:20px; --r-xl:28px; --r-pill:999px;
+  --r-sm:12px; --r:14px; --r-lg:16px; --r-xl:16px; --r-pill:999px;
   --gutter:clamp(16px,4vw,32px); --wrap:1180px;
 
   /* movimento */
   --ez:cubic-bezier(.22,1,.36,1); --ez-io:cubic-bezier(.65,0,.35,1);
-  --mo-ease:var(--ez); --mo-ease-io:var(--ez-io); --mo-glow:rgba(212,58,3,.55);
+  --mo-ease:var(--ez); --mo-ease-io:var(--ez-io);
 
   /* fontes */
   --f-head:"Inter Tight","Plus Jakarta Sans",system-ui,sans-serif;
@@ -77,70 +68,58 @@
   --f-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
 
   /* cópia dos tokens da página (para reaplicar dentro das faixas azul-escuras) */
-  --pg-bg:#F2F2F2; --pg-surface:#FFFFFF; --pg-surface-2:#F5F7FA; --pg-surface-3:#E8EDF4;
-  --pg-ink:#122940; --pg-ink-2:#334F73; --pg-muted:#5B6B80; --pg-tone:#73839A;
-  --pg-line:rgba(18,41,64,.10); --pg-line-2:rgba(18,41,64,.18);
-  --pg-accent-ink:#B23002; --pg-accent-soft:rgba(242,69,5,.10); --pg-ok:#17794A; --pg-ok-soft:rgba(23,121,74,.13); --pg-warn:#C27400;
-  --pg-sh-1:0 1px 2px rgba(18,41,64,.08),0 3px 10px -2px rgba(18,41,64,.09);
-  --pg-sh-2:0 1px 2px rgba(18,41,64,.08),0 14px 34px -8px rgba(18,41,64,.22),0 4px 12px -6px rgba(51,79,115,.16);
+  --pg-bg:#FFFFFF; --pg-surface:#FFFFFF; --pg-surface-2:#F7F6F4; --pg-surface-3:#EDECE9;
+  --pg-ink:#122940; --pg-ink-2:#3B4653; --pg-muted:#716E69; --pg-tone:#8A8782;
+  --pg-line:rgba(20,20,20,.08); --pg-line-2:rgba(20,20,20,.14);
+  --pg-accent-ink:#C43803; --pg-accent-soft:#FFF1EA; --pg-ok:#1E7A46; --pg-ok-soft:#E3F3E8; --pg-warn:#A85D00;
+  --pg-sh-1:0 1px 2px rgba(20,20,20,.04);
+  --pg-sh-2:0 1px 2px rgba(20,20,20,.04),0 8px 24px -12px rgba(20,20,20,.12);
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
     --bg:#0B1A2B; --bg-2:#0F2236; --surface:#122940; --surface-2:#17304B; --surface-3:#1F3A58;
     --ink:#EEF2F7; --ink-2:#BCC8D8; --muted:#93A3B8; --tone:#7889A0;
     --line:rgba(234,238,244,.09); --line-2:rgba(234,238,244,.17);
-    --accent:#F2752E; --accent-ink:#FF9E40; --accent-soft:rgba(242,117,46,.16);
-    --bar:#2A3F5C; --bar-2:#5A7598; --bar-ink:#BCC8D8;
+    --cta:#F24505; --cta-h:#FF5A1F; --on-cta:#141414;
+    --accent:#F2752E; --accent-ink:#FF9E40; --accent-soft:#1F3148;
+    --chip:#FCBA75; --chip-ink:#122940;
+    --bar:#2A3F5C; --bar-2:#BCC8D8; --bar-ink:#EEF2F7;
     --warn:#F0A43A; --warn-soft:rgba(240,164,58,.16); --ok:#4CC38A; --ok-soft:rgba(76,195,138,.16); --on-ok:#0B1624;
-    --heat-lo:#182C45; --heat-hi:#A9BEDB; --heat-k:.35;
-    --glass:rgba(24,44,69,.82);
-    --grad-navy:#0B1A2B;
-    --grad-tint:linear-gradient(180deg,#0F2236 0%,#0B1A2B 100%);
-    --grad-page:linear-gradient(180deg,#112840 0%,#0B1A2B 560px);
-    --grad-border:rgba(234,238,244,.14);
-    --glow-peach:radial-gradient(closest-side,rgba(255,158,64,.20),rgba(252,186,117,.06) 55%,transparent);
-    --glow-navy:radial-gradient(closest-side,rgba(77,103,137,.30),transparent);
-    --sh-1:0 1px 2px rgba(2,8,16,.45);
-    --sh-2:0 1px 2px rgba(2,8,16,.4),0 14px 34px -8px rgba(2,8,16,.6);
-    --sh-3:0 2px 6px rgba(2,8,16,.45),0 40px 90px -20px rgba(2,8,16,.8),0 0 0 1px rgba(234,238,244,.04);
-    --sh-o-2:0 4px 12px -4px rgba(0,0,0,.45);
-    --sh-o-3:0 8px 18px -6px rgba(0,0,0,.5);
-    --rim:0 0 0 0 transparent;
+    --grad-navy:#0B1A2B; --grad-tint:#0B1A2B; --grad-page:#0B1A2B;
+    --grad-hair:rgba(234,238,244,.12); --grad-border:rgba(234,238,244,.14);
+    --sh-1:0 1px 2px rgba(0,0,0,.35);
+    --sh-2:0 1px 2px rgba(0,0,0,.35),0 8px 24px -12px rgba(0,0,0,.5);
+    --sh-3:0 2px 4px rgba(0,0,0,.35),0 24px 48px -24px rgba(0,0,0,.7);
+    --sh-o-1:0 1px 2px rgba(0,0,0,.4); --sh-o-2:0 2px 6px rgba(0,0,0,.5); --sh-o-3:0 2px 6px rgba(0,0,0,.5);
     --pg-bg:#0B1A2B; --pg-surface:#122940; --pg-surface-2:#17304B; --pg-surface-3:#1F3A58;
     --pg-ink:#EEF2F7; --pg-ink-2:#BCC8D8; --pg-muted:#93A3B8; --pg-tone:#7889A0;
     --pg-line:rgba(234,238,244,.09); --pg-line-2:rgba(234,238,244,.17);
-    --pg-accent-ink:#FF9E40; --pg-accent-soft:rgba(242,117,46,.16); --pg-ok:#4CC38A; --pg-ok-soft:rgba(76,195,138,.16); --pg-warn:#F0A43A;
-    --pg-sh-1:0 1px 2px rgba(2,8,16,.45);
-    --pg-sh-2:0 1px 2px rgba(2,8,16,.4),0 14px 34px -8px rgba(2,8,16,.6);
+    --pg-accent-ink:#FF9E40; --pg-accent-soft:#1F3148; --pg-ok:#4CC38A; --pg-ok-soft:rgba(76,195,138,.16); --pg-warn:#F0A43A;
+    --pg-sh-1:0 1px 2px rgba(0,0,0,.35);
+    --pg-sh-2:0 1px 2px rgba(0,0,0,.35),0 8px 24px -12px rgba(0,0,0,.5);
     color-scheme:dark;
 }}
 :root[data-theme="dark"]{
     --bg:#0B1A2B; --bg-2:#0F2236; --surface:#122940; --surface-2:#17304B; --surface-3:#1F3A58;
     --ink:#EEF2F7; --ink-2:#BCC8D8; --muted:#93A3B8; --tone:#7889A0;
     --line:rgba(234,238,244,.09); --line-2:rgba(234,238,244,.17);
-    --accent:#F2752E; --accent-ink:#FF9E40; --accent-soft:rgba(242,117,46,.16);
-    --bar:#2A3F5C; --bar-2:#5A7598; --bar-ink:#BCC8D8;
+    --cta:#F24505; --cta-h:#FF5A1F; --on-cta:#141414;
+    --accent:#F2752E; --accent-ink:#FF9E40; --accent-soft:#1F3148;
+    --chip:#FCBA75; --chip-ink:#122940;
+    --bar:#2A3F5C; --bar-2:#BCC8D8; --bar-ink:#EEF2F7;
     --warn:#F0A43A; --warn-soft:rgba(240,164,58,.16); --ok:#4CC38A; --ok-soft:rgba(76,195,138,.16); --on-ok:#0B1624;
-    --heat-lo:#182C45; --heat-hi:#A9BEDB; --heat-k:.35;
-    --glass:rgba(24,44,69,.82);
-    --grad-navy:#0B1A2B;
-    --grad-tint:linear-gradient(180deg,#0F2236 0%,#0B1A2B 100%);
-    --grad-page:linear-gradient(180deg,#112840 0%,#0B1A2B 560px);
-    --grad-border:rgba(234,238,244,.14);
-    --glow-peach:radial-gradient(closest-side,rgba(255,158,64,.20),rgba(252,186,117,.06) 55%,transparent);
-    --glow-navy:radial-gradient(closest-side,rgba(77,103,137,.30),transparent);
-    --sh-1:0 1px 2px rgba(2,8,16,.45);
-    --sh-2:0 1px 2px rgba(2,8,16,.4),0 14px 34px -8px rgba(2,8,16,.6);
-    --sh-3:0 2px 6px rgba(2,8,16,.45),0 40px 90px -20px rgba(2,8,16,.8),0 0 0 1px rgba(234,238,244,.04);
-    --sh-o-2:0 4px 12px -4px rgba(0,0,0,.45);
-    --sh-o-3:0 8px 18px -6px rgba(0,0,0,.5);
-    --rim:0 0 0 0 transparent;
+    --grad-navy:#0B1A2B; --grad-tint:#0B1A2B; --grad-page:#0B1A2B;
+    --grad-hair:rgba(234,238,244,.12); --grad-border:rgba(234,238,244,.14);
+    --sh-1:0 1px 2px rgba(0,0,0,.35);
+    --sh-2:0 1px 2px rgba(0,0,0,.35),0 8px 24px -12px rgba(0,0,0,.5);
+    --sh-3:0 2px 4px rgba(0,0,0,.35),0 24px 48px -24px rgba(0,0,0,.7);
+    --sh-o-1:0 1px 2px rgba(0,0,0,.4); --sh-o-2:0 2px 6px rgba(0,0,0,.5); --sh-o-3:0 2px 6px rgba(0,0,0,.5);
     --pg-bg:#0B1A2B; --pg-surface:#122940; --pg-surface-2:#17304B; --pg-surface-3:#1F3A58;
     --pg-ink:#EEF2F7; --pg-ink-2:#BCC8D8; --pg-muted:#93A3B8; --pg-tone:#7889A0;
     --pg-line:rgba(234,238,244,.09); --pg-line-2:rgba(234,238,244,.17);
-    --pg-accent-ink:#FF9E40; --pg-accent-soft:rgba(242,117,46,.16); --pg-ok:#4CC38A; --pg-ok-soft:rgba(76,195,138,.16); --pg-warn:#F0A43A;
-    --pg-sh-1:0 1px 2px rgba(2,8,16,.45);
-    --pg-sh-2:0 1px 2px rgba(2,8,16,.4),0 14px 34px -8px rgba(2,8,16,.6);
+    --pg-accent-ink:#FF9E40; --pg-accent-soft:#1F3148; --pg-ok:#4CC38A; --pg-ok-soft:rgba(76,195,138,.16); --pg-warn:#F0A43A;
+    --pg-sh-1:0 1px 2px rgba(0,0,0,.35);
+    --pg-sh-2:0 1px 2px rgba(0,0,0,.35),0 8px 24px -12px rgba(0,0,0,.5);
     color-scheme:dark;
 }
 
@@ -160,12 +139,12 @@ img,svg{display:block}
 
 /* tipografia */
 h1,h2,h3{font-family:var(--f-head);margin:0;color:var(--ink)}
-h1{font-size:clamp(38px,5.4vw,68px);font-weight:600;line-height:1.02;letter-spacing:-.04em;text-wrap:balance}
-h2{font-size:44px;font-weight:600;line-height:1.08;letter-spacing:-.032em;text-wrap:balance}
-h3{font-size:22px;font-weight:600;line-height:1.2;letter-spacing:-.02em}
+h1{font-size:clamp(38px,5.4vw,68px);font-weight:700;line-height:1.02;letter-spacing:-.04em;text-wrap:balance}
+h2{font-size:44px;font-weight:700;line-height:1.08;letter-spacing:-.032em;text-wrap:balance}
+h3{font-size:22px;font-weight:700;line-height:1.2;letter-spacing:-.02em}
 .tone{color:var(--tone)}
-.ember{background:var(--grad-ember);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-box-decoration-break:clone;box-decoration-break:clone}
-.kicker{display:inline-block;font-family:var(--f-mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink)}
+.ember{color:var(--grad-ember)}
+.kicker{display:inline-block;font-family:var(--f-mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
 .lead{font-size:18px;line-height:1.6;color:var(--ink-2);max-width:34em}
 @media (max-width:760px){h2{font-size:30px}h3{font-size:20px}.lead{font-size:16.5px}}
 .sec{position:relative;padding:120px 0}
@@ -181,11 +160,11 @@ h3{font-size:22px;font-weight:600;line-height:1.2;letter-spacing:-.02em}
 /* botões */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:48px;padding:0 22px;border-radius:999px;font-family:var(--f-body);font-weight:700;font-size:15.5px;text-decoration:none;cursor:pointer;border:1px solid transparent;white-space:nowrap;transition:background .2s,box-shadow .25s var(--ez),transform .25s var(--ez),border-color .2s}
 .btn svg{width:20px;height:20px;flex:none}
-.btn-cta{background:var(--grad-cta);color:var(--on-cta);box-shadow:var(--sh-o-2);border-color:transparent}
-.btn-cta:hover{background:var(--grad-cta-h);transform:translateY(-1px);box-shadow:var(--rim),var(--sh-o-3)}
+.btn-cta{background:var(--grad-cta);color:var(--on-cta);box-shadow:var(--sh-o-1);border-color:transparent}
+.btn-cta:hover{background:var(--grad-cta-h);transform:translateY(-1px);box-shadow:var(--sh-o-2)}
 .btn-ghost{background:var(--surface);border-color:var(--line-2);color:var(--ink);box-shadow:var(--sh-1)}
 .btn-ghost:hover{border-color:var(--ink-2)}
-.btn-navy{background:#122940;color:#fff;box-shadow:var(--rim-navy),0 10px 24px -10px rgba(7,18,31,.7)}
+.btn-navy{background:#122940;color:#fff}
 .btn-navy:hover{transform:translateY(-1px)}
 .btn-line{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:#fff}
 .btn-line:hover{border-color:rgba(255,255,255,.5)}
@@ -201,12 +180,12 @@ h3{font-size:22px;font-weight:600;line-height:1.2;letter-spacing:-.02em}
 .sym{width:16px;height:16px;flex:none}
 
 /* ============ nav ============ */
-.nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--line);transition:box-shadow .3s var(--ez)}
-.nav::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--grad-hair);opacity:0;transition:opacity .3s}
+.nav{position:sticky;top:0;z-index:60;background:var(--bg);border-bottom:1px solid var(--line);transition:box-shadow .3s var(--ez)}
 .nav.mo-scrolled{box-shadow:var(--sh-1)}
-.nav.mo-scrolled::after{opacity:.4}
 .nav .wrap{display:flex;align-items:center;gap:16px;height:64px;min-width:0}
-.logo{display:flex;align-items:center;text-decoration:none;min-width:0;color:var(--ink);flex:none}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0;color:var(--ink);flex:none}
+.logo-cedo{display:inline-block;padding-left:12px;border-left:1px solid var(--line-2);font:700 21px/1 var(--f-head);letter-spacing:-.03em;color:var(--ink);translate:0 1px}
+@media (max-width:480px){.logo{gap:8px}.logo-cedo{font-size:17px;padding-left:8px}}
 .logo-w{width:176px;height:26px;flex:none}
 .nav-links{display:flex;gap:2px;margin-left:auto}
 .nav-links a{text-decoration:none;font-size:14px;font-weight:600;color:var(--ink-2);padding:8px 12px;border-radius:999px}
@@ -225,9 +204,8 @@ h3{font-size:22px;font-weight:600;line-height:1.2;letter-spacing:-.02em}
 .dark{--ink:#EEF2F7;--ink-2:#C3CFDE;--muted:#9FB0C6;--tone:#8597B0;--line:rgba(234,238,244,.12);--line-2:rgba(234,238,244,.2);
   --surface:rgba(255,255,255,.06);--surface-2:rgba(255,255,255,.04);--surface-3:rgba(255,255,255,.10);
   --accent-ink:#FF9E40;--accent-soft:rgba(242,117,46,.18);--ok:#4CC38A;--warn:#F0A43A;
-  --sh-2:0 1px 0 rgba(255,255,255,.06) inset,0 20px 40px -12px rgba(2,8,16,.6);
+  --sh-2:0 1px 2px rgba(0,0,0,.25),0 8px 24px -12px rgba(0,0,0,.45);
   position:relative;isolation:isolate;overflow:clip;background:var(--grad-navy);color:var(--ink)}
-.dark::after{content:"";position:absolute;inset:0 0 auto;height:1px;background:var(--grad-hair);opacity:.5}
 /* dentro da faixa escura, telas e cards voltam aos tokens da página */
 .pane{--bg:var(--pg-bg);--surface:var(--pg-surface);--surface-2:var(--pg-surface-2);--surface-3:var(--pg-surface-3);--ink:var(--pg-ink);--ink-2:var(--pg-ink-2);--muted:var(--pg-muted);--tone:var(--pg-tone);--line:var(--pg-line);--line-2:var(--pg-line-2);--accent-ink:var(--pg-accent-ink);--accent-soft:var(--pg-accent-soft);--ok:var(--pg-ok);--ok-soft:var(--pg-ok-soft);--warn:var(--pg-warn);--sh-1:var(--pg-sh-1);--sh-2:var(--pg-sh-2);color:var(--ink)}
 .dark-wm{position:absolute;z-index:-1;width:440px;height:440px;left:-120px;bottom:-140px;opacity:.06;pointer-events:none}
@@ -235,10 +213,9 @@ h3{font-size:22px;font-weight:600;line-height:1.2;letter-spacing:-.02em}
 
 /* ============ diagnóstico (passos) ============ */
 .dg-sec .sec-head{margin-bottom:40px}
-.dg-sec::before{content:"";position:absolute;z-index:-1;left:50%;top:58%;width:min(1000px,140vw);aspect-ratio:1;translate:-50% -50%;background:var(--glow-on-navy);pointer-events:none}
 .dg-pts{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 20px;margin:18px 0 0;padding:0;list-style:none;font-size:14px;color:var(--ink-2)}
 .dg-pts li{display:inline-flex;align-items:center;gap:8px}
-.dg{position:relative;max-width:640px;margin:0 auto;padding:28px 32px 30px;border-radius:var(--r-lg);background:var(--surface);border:1px solid var(--line);box-shadow:var(--sh-3),var(--rim);overflow:hidden}
+.dg{position:relative;max-width:640px;margin:0 auto;padding:28px 32px 30px;border-radius:var(--r-lg);background:var(--surface);border:1px solid var(--line);box-shadow:var(--sh-3);overflow:hidden}
 :root[data-theme="dark"] .dg{border-color:rgba(234,238,244,.12)}
 .dg-top{display:flex;align-items:center;gap:12px;min-height:40px}
 .dg-sym{width:30px;height:30px;flex:none;overflow:visible;rotate:var(--dg-rot,0deg);transition:rotate .8s var(--ez)}
@@ -248,16 +225,16 @@ h3{font-size:22px;font-weight:600;line-height:1.2;letter-spacing:-.02em}
 .dg-back:hover{border-color:var(--ink-2);color:var(--ink)}
 .dg-back[hidden]{display:none}
 .dg-bar{height:6px;border-radius:999px;background:var(--surface-3);margin:16px 0 26px;overflow:hidden}
-.dg-bar i{display:block;height:100%;width:0;border-radius:999px;background:var(--grad-ember);box-shadow:var(--sh-o-1)}
+.dg-bar i{display:block;height:100%;width:0;border-radius:999px;background:var(--o2);box-shadow:var(--sh-o-1)}
 .dg-stage{min-height:300px;display:flex;flex-direction:column;justify-content:center}
 .dg-step h3{font-size:25px;letter-spacing:-.025em;line-height:1.18;outline:none}
 .dg-step>p{margin:10px 0 0;color:var(--ink-2);font-size:15.5px}
 .dg-opts{display:grid;gap:10px;margin-top:24px}
 .dg-opt{display:flex;align-items:center;gap:14px;width:100%;min-height:56px;padding:10px 18px;border-radius:14px;border:1px solid var(--line-2);background:var(--surface-2);font-size:16px;font-weight:600;color:var(--ink);text-align:left;cursor:pointer;transition:border-color .2s,background .2s,color .2s,transform .2s var(--ez),box-shadow .25s}
 .dg-opt kbd{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:8px;border:1px solid var(--line-2);background:var(--surface);font-family:var(--f-mono);font-size:12px;color:var(--muted)}
-.dg-opt:hover{border-color:var(--o2);background:var(--accent-soft)}
-.dg-opt[aria-pressed="true"]{background:var(--n2);border-color:var(--n2);color:#fff;box-shadow:0 10px 24px -12px rgba(18,41,64,.7)}
-.dg-opt[aria-pressed="true"] kbd{background:var(--grad-ember);border-color:transparent;color:#122940}
+@media (hover:hover){.dg-opt:hover{border-color:var(--o2)}}
+.dg-opt[aria-pressed="true"]{background:var(--n2);border-color:var(--n2);color:#fff;box-shadow:var(--sh-o-1)}
+.dg-opt[aria-pressed="true"] kbd{background:var(--o2);border-color:transparent;color:#122940}
 :root[data-theme="dark"] .dg-opt[aria-pressed="true"]{background:#EEF2F7;border-color:#EEF2F7;color:#122940}
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]) .dg{border-color:rgba(234,238,244,.12)}
@@ -300,6 +277,18 @@ h3{font-size:22px;font-weight:600;line-height:1.2;letter-spacing:-.02em}
 .dg-mail svg{width:16px;height:16px;color:var(--ok);vertical-align:-3px;margin-right:6px}
 .dg-res .btn{margin-top:22px}
 .dg-redo{display:block;margin:14px auto 0;border:0;background:none;font-size:14px;font-weight:700;color:var(--muted);text-decoration:underline;cursor:pointer}
+.dg-v{font-size:24px;padding:8px 18px;margin-top:16px}
+.dg-help{margin:8px 0 0;font-size:14px;color:var(--muted)}
+.dg-opt.sub{background:var(--surface-2);font-weight:500;color:var(--ink-2)}
+.dg-prox,.dg-lista{list-style:none;margin:22px auto 0;padding:0;max-width:30em;text-align:left;display:grid;gap:0;border-top:1px solid var(--line)}
+.dg-prox li,.dg-lista li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink-2)}
+.dg-prox i{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font:700 12px/1 var(--f-mono);background:var(--n2);color:#fff;font-style:normal}
+:root[data-theme="dark"] .dg-prox i{background:#EEF2F7;color:#122940}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dg-prox i{background:#EEF2F7;color:#122940}}
+.dg-prox li:last-child i{background:var(--cta);color:var(--on-cta)}
+.dg-lista i{width:18px;height:18px;margin-top:2px;border-radius:5px;border:1.5px solid var(--line-2)}
+.dg-prox b,.dg-lista b{color:var(--ink)}
+.dg-res>p.dg-sub-p{margin-top:10px}
 @media (max-width:600px){
   .dg{padding:20px 18px 22px;border-radius:18px}
   .dg-step h3{font-size:21px}
@@ -311,12 +300,7 @@ h3{font-size:22px;font-weight:600;line-height:1.2;letter-spacing:-.02em}
 /* ============ movimento (mo-) ============ */
 .mo-logo .mo-raios,.mo-logo .mo-base{transform-box:fill-box;transform-origin:50% 50%}
 .mo-bar{transform-origin:left center}.mo-col{transform-origin:center bottom}
-.mo-shine{position:relative;overflow:hidden;isolation:isolate}
-.mo-shine::after{content:"";position:absolute;inset:-2px;z-index:-1;pointer-events:none;
-  background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.38) 50%,transparent 62%);transform:translateX(-130%)}
 .mo-glow{position:relative;isolation:isolate;overflow:clip}
-.mo-glow::before{content:"";position:absolute;z-index:-1;pointer-events:none;width:min(900px,120vw);aspect-ratio:1;
-  left:var(--gx,70%);top:var(--gy,20%);translate:-50% -50%;background:var(--glow,var(--glow-peach))}
 
 @media (prefers-reduced-motion:no-preference){
   @keyframes mo-up{from{opacity:0;translate:0 18px}}
@@ -362,51 +346,37 @@ h3{font-size:22px;font-weight:600;line-height:1.2;letter-spacing:-.02em}
 
   @media (hover:hover){.mo-lift{transition:transform .35s var(--ez),box-shadow .35s var(--ez)}
     .mo-lift:hover{transform:translateY(-4px);box-shadow:var(--sh-3)}}
-  @keyframes mo-sweep{0%,80%{transform:translateX(-130%)}100%{transform:translateX(130%)}}
-  html.mo .mo-shine::after{animation:mo-sweep 7s var(--ez-io) 2.6s infinite}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}html{scroll-behavior:auto}}
 
 /* ============ página do diagnóstico ============ */
 .logo-w{width:168px;height:auto;aspect-ratio:924/136;overflow:visible}
-body.dgp{background:#0B1A2B}
+body.dgp{background:var(--bg)}
 .dgp-bg{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
 .dgp-wm{position:absolute;z-index:-1;pointer-events:none;width:min(820px,150vw);aspect-ratio:1;right:-18%;top:-12%;opacity:.045;overflow:visible}
 .mo-logo-bg .mo-raios,.mo-logo-bg .mo-base{transform-box:fill-box;transform-origin:50% 50%}
-.dgp-nav{position:relative;z-index:2}
+.dgp-nav{position:relative;z-index:2;border-bottom:1px solid var(--line)}
 .dgp-nav .wrap{display:flex;align-items:center;gap:12px;height:72px}
-.dgp-nav .logo{color:#fff}
+.dgp-nav .logo{color:var(--ink)}
 .dgp-nav .nav-r{margin-left:auto;display:flex;gap:8px;align-items:center}
 .dgp-nav .btn svg{width:16px;height:16px;rotate:180deg}
 .dgp-main{position:relative;flex:1;padding:clamp(20px,4vw,48px) 0 clamp(40px,6vw,72px)}
-.dgp-main::before{content:"";position:absolute;z-index:-1;left:50%;top:58%;width:min(1000px,150vw);aspect-ratio:1;translate:-50% -50%;background:var(--glow-on-navy);pointer-events:none}
 .dgp-head{max-width:640px;margin:0 auto 28px;text-align:center}
-.dgp-head h1{font-size:clamp(30px,4.4vw,46px);font-weight:600;color:#fff;margin-top:14px;letter-spacing:-.035em;line-height:1.08}
+.dgp-head h1{font-size:clamp(30px,4.4vw,46px);font-weight:600;color:var(--ink);margin-top:14px;letter-spacing:-.035em;line-height:1.08}
 .dgp-head p{margin:14px auto 0;color:var(--ink-2);font-size:16.5px;max-width:32em}
 .dg-pts{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 20px;margin:18px 0 0;padding:0;list-style:none;font-size:14px;color:var(--ink-2)}
 .dg-pts li{display:inline-flex;align-items:center;gap:8px}
 .dgp-foot{padding:22px 0 28px;font-size:13px;color:var(--muted);text-align:center;border-top:1px solid var(--line)}
 .dgp-foot a{color:var(--ink-2);font-weight:600;text-decoration:none}
-.dgp-foot a:hover{color:#fff}
-@media (max-width:480px){.dgp-nav .logo-w{width:140px}.dgp-nav .btn-sm{padding:0 12px;font-size:13px}.dgp-head{text-align:left}.dg-pts{justify-content:flex-start}}
+.dgp-foot a:hover{color:var(--ink)}
+@media (max-width:480px){.dgp-nav .logo-w{width:128px}.dgp-nav .icon-btn{display:none}.dgp-nav .btn-sm{padding:0 10px;font-size:13px}.dgp-head{text-align:left}.dg-pts{justify-content:flex-start}}
 @media (max-width:600px){.dg-stage{min-height:0}}
 @media (prefers-reduced-motion:no-preference){html.mo .mo-logo-bg .mo-raios{animation:mo-spin 120s linear infinite}}
-:root[data-theme="dark"] .dgp .dg{background:linear-gradient(180deg,#1A3552,#122940 60%)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dgp .dg{background:linear-gradient(180deg,#1A3552,#122940 60%)}}
 
 
-/* dono: sem brilhos e sem efeito vidro */
-*::before,*::after{--glow-peach:none;--glow-orange:none;--glow-navy:none;--glow-on-navy:none}
-.nav{background:var(--bg)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
-.mo-shine::after{display:none!important}
+
 </style>
-<noscript><style>[data-dg-start]{display:none}
-/* dono: sem degradê laranja forte */
-.ember{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:#F24505!important}
-.how-ln{background:var(--o2)!important}
-.av.n{background:#122940!important}
-.foot::before{display:none!important}
-</style></noscript>
+<noscript><style>[data-dg-start]{display:none}</style></noscript>
 </head>
 <body class="dgp">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -422,21 +392,22 @@ body.dgp{background:#0B1A2B}
 <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
 </svg>
-<div class="dgp-bg dark">
+<div class="dgp-bg">
   <svg class="dgp-wm mo-logo-bg" viewBox="78 472 138 136" aria-hidden="true"><path class="mo-raios" fill="#F2752E" d="M212.1,545.4l-39.2,3.7,29.6,26.2c-3.6,5-2.3,3.2-5.9,8.2l-33.9-20.2,8.6,38.7c-5.8,1.9-3.7,1.2-9.5,3.1l-12.5-29.2,20.3-47.1,3.5-8.1-8.8.9-50.5,5.2-23.9-21.2c3.6-5,2.3-3.2,5.9-8.2l33.9,20.2-8.6-38.7c5.8-1.9,3.7-1.2,9.5-3.1l15.6,36.4,15.6-36.4c5.8,1.9,3.7,1.2,9.5,3.1l-8.7,38.7,33.9-20.2c3.6,5,2.3,3.2,5.9,8.2l-29.6,26.2,39.2,3.7v10.1Z"/><polygon class="mo-base" fill="#FCBA75" points="119.1 531.3 80.8 535.3 80.8 545.4 120 549 86 578.9 91.9 587.1 130.2 563.2 121.6 601.8 131.1 604.9 146.5 569.2 164.8 526.6 119.1 531.3"/></svg>
   <header class="dgp-nav">
     <div class="wrap">
-      <a class="logo" href="./" aria-label="Gestão Sem Caos, voltar ao site"><svg class="logo-w" width="168" height="25" viewBox="0 0 924 136" aria-hidden="true"><svg class="mo-logo mo-now" x="0" y="0" width="924" height="136" viewBox="78 472 924 136" overflow="visible"><path fill="currentColor" d="M250.8,540.5c0,16.2,9.3,25.1,22.6,25.1s20.2-7,20.2-18.6v-.3h-21.9v-11.2h33.6v40.9h-10.7l-.8-8.4c-4,5.6-12.2,9.4-21.9,9.4-20.3,0-34.4-14.8-34.4-37.2s14.3-37.8,36.1-37.8,29.3,9.6,31.3,24.5h-13.3c-2.3-8.6-9.6-12.5-18.3-12.5-14.3,0-22.5,10.4-22.5,26.1"/><path fill="currentColor" d="M325.3,546.9h24.5c0-6.8-4.6-11.2-11.9-11.2s-11.5,3.9-12.7,11.2M313.5,551.8c0-15.4,10-26,24.3-26s23.9,9.8,23.9,25.2v3.7h-36.8c.9,8.8,5.4,13.1,13.4,13.1s11-2.6,12.4-7.3h11.2c-2.1,10.7-11,17.2-23.7,17.2s-24.7-10.6-24.7-25.9"/><path fill="currentColor" d="M378.3,561.4c0,4.3,3.3,7,8.8,7s8.7-2.3,8.7-5.9-1.3-4.3-5.6-5.3l-8.8-2.1c-8.8-2-13.1-6.2-13.1-14s8.1-15.4,19.4-15.4,18.4,6.4,18.5,15.9h-11.5c0-4.2-2.9-6.9-7.5-6.9s-7.5,2.2-7.5,5.9,2.2,4.6,6.3,5.6l8.8,2.1c8.2,1.9,12.4,5.7,12.4,13.2s-8.4,16.1-20.5,16.1-19.9-6.6-19.9-16.2h11.5Z"/><polygon fill="currentColor" points="423.1 576.3 423.1 537.3 413.7 537.3 413.7 527.2 423.1 527.2 423.1 511.9 435.2 511.9 435.2 527.2 444.7 527.2 444.7 537.3 435.2 537.3 435.2 576.3 423.1 576.3"/><path fill="currentColor" d="M484.8,556.4v-2.6l-10.2.8c-7.5.7-10.4,3.2-10.4,7.2s3,6.7,8.4,6.7,12.2-4.5,12.2-12M458.9,520.5c-.9-8.6,2.8-14,9.1-14s9.9,5.9,14,5.9,3.5-2.3,3.5-5.9h7.1c.8,9.4-3.1,14-9.4,14s-10.3-5.9-13.8-5.9-3.4,2.2-3.4,5.9h-7.1ZM452,562.3c0-9,6.5-14.7,18.1-15.6l14.6-1.1v-1.1c0-6.7-4-9.3-10.1-9.3s-11.1,3-11.1,8.2h-10.3c0-10.6,8.7-17.6,21.9-17.6s21.3,7.2,21.3,20.8v29.8h-10.6l-.9-7.3c-2.1,5.1-8.7,8.5-16.3,8.5s-16.7-6.1-16.7-15.3"/><path fill="currentColor" d="M533.9,566.7c8.3,0,14-6.1,14-15s-5.7-15-14-15-14,6.1-14,15,5.7,15,14,15M533.9,525.8c15.1,0,26.1,10.5,26.1,25.9s-11,25.8-26.1,25.8-26.1-10.5-26.1-25.8,11-25.9,26.1-25.9"/><path fill="currentColor" d="M589.8,562.8c0,5.6,4.2,9,10.9,9s11.8-3.2,11.8-8.4-2-6.3-7.6-7.7l-8.2-2.1c-8.3-2.1-12.4-6.5-12.4-13s7-13.8,17.3-13.8,16.6,5.6,16.9,14.5h-6.6c-.2-5.6-4.1-8.8-10.5-8.8s-10.5,2.9-10.5,8.1,2.6,6.3,7.8,7.6l8.2,2.1c8.3,2.1,12.1,6,12.1,12.9s-7.3,14.3-18.2,14.3-17.5-5.8-17.5-14.7h6.5Z"/><path fill="currentColor" d="M633.6,548.2h31c0-9.2-5.9-15.4-14.9-15.4s-14.9,6-16.1,15.4M626.8,552.3c0-15,9.3-25.4,22.9-25.4s21.8,9.2,21.8,22.9v3.4h-38.1c.5,11.7,6.6,18.5,16.9,18.5s12.9-3.4,14.6-9.7h6.5c-2.6,10.1-10,15.6-21.3,15.6s-23.4-10.1-23.4-25.3"/><path fill="currentColor" d="M682.2,576.3v-48.1h5.9l.8,6.9c2.4-5.1,7.7-8.2,14.4-8.2s13.1,4,15.4,10.2c2.2-6.3,8-10.2,15.7-10.2s17.2,6.8,17.2,17.9v31.5h-6.6v-30.1c0-8.3-4.5-13.1-11.9-13.1s-12.8,6.1-12.8,13.5v29.7h-6.7v-30.2c0-8.2-4.6-12.9-11.9-12.9s-12.9,6-12.9,13.3v29.8h-6.8Z"/><path fill="currentColor" d="M778.6,540.7c0-21.9,13.6-36.8,33.6-36.8s27.2,9.2,30.1,23.4h-7.6c-3-10.2-11.7-16.5-22.7-16.5s-25.9,11.9-25.9,29.9,10.4,29.8,25.9,29.8,20.1-6.1,23.1-15.6h7.6c-3.3,13.4-15.6,22.5-30.8,22.5s-33.2-14.8-33.2-36.7"/><path fill="currentColor" d="M886.1,554.5v-2.6l-14.1,1.1c-9,.8-12.7,4.8-12.7,10.1s4.3,8.8,10.9,8.8c10.1,0,15.9-7.1,15.9-17.5M852.4,563.3c0-8.8,6.7-14.4,17.9-15.3l15.8-1.3v-1.6c0-9.4-5.6-12.4-12.7-12.4s-13.2,3.8-13.2,10.2h-6.2c0-9.7,7.9-16,19.7-16s19.2,5.6,19.2,18.3v31.1h-5.7l-.9-8.5c-3,6.1-9.5,9.6-17.6,9.6s-16.2-5.8-16.2-14.2"/><path fill="currentColor" d="M929.7,571.4c10.2,0,17.4-7.9,17.4-19.2s-7.2-19.1-17.4-19.1-17.4,8-17.4,19.1,7.1,19.2,17.4,19.2M929.7,526.9c14,0,24.3,10.6,24.3,25.4s-10.3,25.3-24.3,25.3-24.3-10.6-24.3-25.3,10.3-25.4,24.3-25.4"/><path fill="currentColor" d="M969.6,562.8c0,5.6,4.2,9,10.9,9s11.8-3.2,11.8-8.4-2-6.3-7.6-7.7l-8.2-2.1c-8.3-2.1-12.4-6.5-12.4-13s7-13.8,17.3-13.8,16.6,5.6,16.9,14.5h-6.6c-.2-5.6-4.1-8.8-10.5-8.8s-10.5,2.9-10.5,8.1,2.6,6.3,7.8,7.6l8.2,2.1c8.3,2.1,12.1,6,12.1,12.9s-7.3,14.3-18.2,14.3-17.5-5.8-17.5-14.7h6.5Z"/><path class="mo-raios" fill="#F2752E" d="M212.1,545.4l-39.2,3.7,29.6,26.2c-3.6,5-2.3,3.2-5.9,8.2l-33.9-20.2,8.6,38.7c-5.8,1.9-3.7,1.2-9.5,3.1l-12.5-29.2,20.3-47.1,3.5-8.1-8.8.9-50.5,5.2-23.9-21.2c3.6-5,2.3-3.2,5.9-8.2l33.9,20.2-8.6-38.7c5.8-1.9,3.7-1.2,9.5-3.1l15.6,36.4,15.6-36.4c5.8,1.9,3.7,1.2,9.5,3.1l-8.7,38.7,33.9-20.2c3.6,5,2.3,3.2,5.9,8.2l-29.6,26.2,39.2,3.7v10.1Z"/><polygon class="mo-base" fill="#FCBA75" points="119.1 531.3 80.8 535.3 80.8 545.4 120 549 86 578.9 91.9 587.1 130.2 563.2 121.6 601.8 131.1 604.9 146.5 569.2 164.8 526.6 119.1 531.3"/></svg></svg></a>
+      <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+      <a class="logo" href="./" aria-label="Cedo, da Gestão Sem Caos. Voltar ao site"><svg class="logo-w" width="168" height="25" viewBox="0 0 924 136" aria-hidden="true"><svg class="mo-logo mo-now" x="0" y="0" width="924" height="136" viewBox="78 472 924 136" overflow="visible"><path fill="currentColor" d="M250.8,540.5c0,16.2,9.3,25.1,22.6,25.1s20.2-7,20.2-18.6v-.3h-21.9v-11.2h33.6v40.9h-10.7l-.8-8.4c-4,5.6-12.2,9.4-21.9,9.4-20.3,0-34.4-14.8-34.4-37.2s14.3-37.8,36.1-37.8,29.3,9.6,31.3,24.5h-13.3c-2.3-8.6-9.6-12.5-18.3-12.5-14.3,0-22.5,10.4-22.5,26.1"/><path fill="currentColor" d="M325.3,546.9h24.5c0-6.8-4.6-11.2-11.9-11.2s-11.5,3.9-12.7,11.2M313.5,551.8c0-15.4,10-26,24.3-26s23.9,9.8,23.9,25.2v3.7h-36.8c.9,8.8,5.4,13.1,13.4,13.1s11-2.6,12.4-7.3h11.2c-2.1,10.7-11,17.2-23.7,17.2s-24.7-10.6-24.7-25.9"/><path fill="currentColor" d="M378.3,561.4c0,4.3,3.3,7,8.8,7s8.7-2.3,8.7-5.9-1.3-4.3-5.6-5.3l-8.8-2.1c-8.8-2-13.1-6.2-13.1-14s8.1-15.4,19.4-15.4,18.4,6.4,18.5,15.9h-11.5c0-4.2-2.9-6.9-7.5-6.9s-7.5,2.2-7.5,5.9,2.2,4.6,6.3,5.6l8.8,2.1c8.2,1.9,12.4,5.7,12.4,13.2s-8.4,16.1-20.5,16.1-19.9-6.6-19.9-16.2h11.5Z"/><polygon fill="currentColor" points="423.1 576.3 423.1 537.3 413.7 537.3 413.7 527.2 423.1 527.2 423.1 511.9 435.2 511.9 435.2 527.2 444.7 527.2 444.7 537.3 435.2 537.3 435.2 576.3 423.1 576.3"/><path fill="currentColor" d="M484.8,556.4v-2.6l-10.2.8c-7.5.7-10.4,3.2-10.4,7.2s3,6.7,8.4,6.7,12.2-4.5,12.2-12M458.9,520.5c-.9-8.6,2.8-14,9.1-14s9.9,5.9,14,5.9,3.5-2.3,3.5-5.9h7.1c.8,9.4-3.1,14-9.4,14s-10.3-5.9-13.8-5.9-3.4,2.2-3.4,5.9h-7.1ZM452,562.3c0-9,6.5-14.7,18.1-15.6l14.6-1.1v-1.1c0-6.7-4-9.3-10.1-9.3s-11.1,3-11.1,8.2h-10.3c0-10.6,8.7-17.6,21.9-17.6s21.3,7.2,21.3,20.8v29.8h-10.6l-.9-7.3c-2.1,5.1-8.7,8.5-16.3,8.5s-16.7-6.1-16.7-15.3"/><path fill="currentColor" d="M533.9,566.7c8.3,0,14-6.1,14-15s-5.7-15-14-15-14,6.1-14,15,5.7,15,14,15M533.9,525.8c15.1,0,26.1,10.5,26.1,25.9s-11,25.8-26.1,25.8-26.1-10.5-26.1-25.8,11-25.9,26.1-25.9"/><path fill="currentColor" d="M589.8,562.8c0,5.6,4.2,9,10.9,9s11.8-3.2,11.8-8.4-2-6.3-7.6-7.7l-8.2-2.1c-8.3-2.1-12.4-6.5-12.4-13s7-13.8,17.3-13.8,16.6,5.6,16.9,14.5h-6.6c-.2-5.6-4.1-8.8-10.5-8.8s-10.5,2.9-10.5,8.1,2.6,6.3,7.8,7.6l8.2,2.1c8.3,2.1,12.1,6,12.1,12.9s-7.3,14.3-18.2,14.3-17.5-5.8-17.5-14.7h6.5Z"/><path fill="currentColor" d="M633.6,548.2h31c0-9.2-5.9-15.4-14.9-15.4s-14.9,6-16.1,15.4M626.8,552.3c0-15,9.3-25.4,22.9-25.4s21.8,9.2,21.8,22.9v3.4h-38.1c.5,11.7,6.6,18.5,16.9,18.5s12.9-3.4,14.6-9.7h6.5c-2.6,10.1-10,15.6-21.3,15.6s-23.4-10.1-23.4-25.3"/><path fill="currentColor" d="M682.2,576.3v-48.1h5.9l.8,6.9c2.4-5.1,7.7-8.2,14.4-8.2s13.1,4,15.4,10.2c2.2-6.3,8-10.2,15.7-10.2s17.2,6.8,17.2,17.9v31.5h-6.6v-30.1c0-8.3-4.5-13.1-11.9-13.1s-12.8,6.1-12.8,13.5v29.7h-6.7v-30.2c0-8.2-4.6-12.9-11.9-12.9s-12.9,6-12.9,13.3v29.8h-6.8Z"/><path fill="currentColor" d="M778.6,540.7c0-21.9,13.6-36.8,33.6-36.8s27.2,9.2,30.1,23.4h-7.6c-3-10.2-11.7-16.5-22.7-16.5s-25.9,11.9-25.9,29.9,10.4,29.8,25.9,29.8,20.1-6.1,23.1-15.6h7.6c-3.3,13.4-15.6,22.5-30.8,22.5s-33.2-14.8-33.2-36.7"/><path fill="currentColor" d="M886.1,554.5v-2.6l-14.1,1.1c-9,.8-12.7,4.8-12.7,10.1s4.3,8.8,10.9,8.8c10.1,0,15.9-7.1,15.9-17.5M852.4,563.3c0-8.8,6.7-14.4,17.9-15.3l15.8-1.3v-1.6c0-9.4-5.6-12.4-12.7-12.4s-13.2,3.8-13.2,10.2h-6.2c0-9.7,7.9-16,19.7-16s19.2,5.6,19.2,18.3v31.1h-5.7l-.9-8.5c-3,6.1-9.5,9.6-17.6,9.6s-16.2-5.8-16.2-14.2"/><path fill="currentColor" d="M929.7,571.4c10.2,0,17.4-7.9,17.4-19.2s-7.2-19.1-17.4-19.1-17.4,8-17.4,19.1,7.1,19.2,17.4,19.2M929.7,526.9c14,0,24.3,10.6,24.3,25.4s-10.3,25.3-24.3,25.3-24.3-10.6-24.3-25.3,10.3-25.4,24.3-25.4"/><path fill="currentColor" d="M969.6,562.8c0,5.6,4.2,9,10.9,9s11.8-3.2,11.8-8.4-2-6.3-7.6-7.7l-8.2-2.1c-8.3-2.1-12.4-6.5-12.4-13s7-13.8,17.3-13.8,16.6,5.6,16.9,14.5h-6.6c-.2-5.6-4.1-8.8-10.5-8.8s-10.5,2.9-10.5,8.1,2.6,6.3,7.8,7.6l8.2,2.1c8.3,2.1,12.1,6,12.1,12.9s-7.3,14.3-18.2,14.3-17.5-5.8-17.5-14.7h6.5Z"/><path class="mo-raios" fill="#F2752E" d="M212.1,545.4l-39.2,3.7,29.6,26.2c-3.6,5-2.3,3.2-5.9,8.2l-33.9-20.2,8.6,38.7c-5.8,1.9-3.7,1.2-9.5,3.1l-12.5-29.2,20.3-47.1,3.5-8.1-8.8.9-50.5,5.2-23.9-21.2c3.6-5,2.3-3.2,5.9-8.2l33.9,20.2-8.6-38.7c5.8-1.9,3.7-1.2,9.5-3.1l15.6,36.4,15.6-36.4c5.8,1.9,3.7,1.2,9.5,3.1l-8.7,38.7,33.9-20.2c3.6,5,2.3,3.2,5.9,8.2l-29.6,26.2,39.2,3.7v10.1Z"/><polygon class="mo-base" fill="#FCBA75" points="119.1 531.3 80.8 535.3 80.8 545.4 120 549 86 578.9 91.9 587.1 130.2 563.2 121.6 601.8 131.1 604.9 146.5 569.2 164.8 526.6 119.1 531.3"/></svg></svg><span class="logo-cedo" data-pn aria-hidden="true">Cedo</span></a>
       <div class="nav-r">
         <button class="icon-btn" type="button" data-theme-btn aria-label="Alternar tema claro e escuro"><svg class="ico-moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="ico-sun" aria-hidden="true"><use href="#i-sun"/></svg></button>
-        <a class="btn btn-line btn-sm" href="./"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Voltar ao site</a>
+        <a class="btn btn-ghost btn-sm" href="./"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Voltar ao site</a>
       </div>
     </div>
   </header>
   <main class="dgp-main" id="conteudo">
     <div class="wrap">
       <div class="dgp-head">
-        <span class="kicker mo-h" style="--mo-d:40ms">Diagnóstico grátis</span>
+        <span class="kicker mo-h" style="--mo-d:40ms">Diagnóstico <span data-pn>Cedo</span> · grátis</span>
         <h1 class="mo-h" style="--mo-d:120ms">A sua clínica está pronta para a <span class="ember">Leitura diária</span>?</h1>
         <ul class="dg-pts mo-h" style="--mo-d:200ms">
           <li><svg class="sym" viewBox="0 0 138 136" aria-hidden="true"><use href="#i-logo"/></svg>6 perguntas, uma por vez</li>
@@ -455,19 +426,25 @@ body.dgp{background:#0B1A2B}
       <div class="dg-stage" data-dg-stage>
         <div class="dg-step">
           <h3 tabindex="-1">Vamos ver se a sua clínica está pronta?</h3>
-          <p>São 6 perguntas rápidas sobre os sistemas e a equipe. No fim, você vê a nota e recebe o resultado no e-mail.</p>
-          <button class="btn btn-cta btn-lg dg-go mo-shine" type="button" data-dg-start>Começar o diagnóstico<svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <p>São 6 perguntas sobre os sistemas e a equipe. No fim, você vê o resultado na hora e recebe uma cópia no e-mail com o que já está pronto e o que falta.</p>
+          <button class="btn btn-cta btn-lg dg-go" type="button" data-dg-start>Começar<svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
           <noscript><a class="btn btn-cta btn-lg" href="https://wa.me/5562994029664?text=Ol%C3%A1!%20Quero%20fazer%20o%20diagn%C3%B3stico.">Fazer o diagnóstico pelo WhatsApp</a></noscript>
-          <p class="dg-alt">Prefere conversar direto? <a href="https://wa.me/5562994029664?text=Ol%C3%A1!%20Quero%20conhecer%20a%20Gest%C3%A3o%20Sem%20Caos%20para%20cl%C3%ADnicas." target="_blank" rel="noopener">Chamar no WhatsApp</a></p>
+          <p class="dg-alt">Prefere responder pelo WhatsApp? <a href="https://wa.me/5562994029664?text=Ol%C3%A1!%20Quero%20conhecer%20o%20Cedo%2C%20da%20Gest%C3%A3o%20Sem%20Caos%2C%20para%20a%20minha%20cl%C3%ADnica." target="_blank" rel="noopener">Chamar no WhatsApp</a></p>
         </div>
       </div>
       </div>
     </div>
   </main>
-  <footer class="dgp-foot"><div class="wrap">© 2026 Gestão Sem Caos · <a href="./">Conhecer a Gestão Sem Caos para clínicas</a> · <a href="https://wa.me/5562994029664?text=Ol%C3%A1!%20Quero%20conhecer%20a%20Gest%C3%A3o%20Sem%20Caos%20para%20cl%C3%ADnicas." target="_blank" rel="noopener">WhatsApp (62) 99402-9664</a></div></footer>
+  <footer class="dgp-foot"><div class="wrap">© 2026 Gestão Sem Caos · <a href="./">Conhecer o <span data-pn>Cedo</span></a> · <a href="https://wa.me/5562994029664?text=Ol%C3%A1!%20Quero%20conhecer%20o%20Cedo%2C%20da%20Gest%C3%A3o%20Sem%20Caos%2C%20para%20a%20minha%20cl%C3%ADnica." target="_blank" rel="noopener">WhatsApp (62) 99402-9664</a></div></footer>
 </div>
 <script>
-/* ---------- tema, botões de demonstração, copiar número, barra do celular ---------- */
+/* ---------- NOME DO PRODUTO: troque só aqui (e no <title>/og do <head>). ---------- */
+var PRODUTO='Cedo';
+(function(){
+  if(PRODUTO==='Cedo')return;
+  [].forEach.call(document.querySelectorAll('[data-pn]'),function(el){el.textContent=PRODUTO});
+})();
+/* ---------- tema ---------- */
 (function(){
   var root=document.documentElement;
   function tema(){var t=root.getAttribute('data-theme');if(t)return t;return matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
@@ -475,38 +452,25 @@ body.dgp{background:#0B1A2B}
     var n=tema()==='dark'?'light':'dark';root.setAttribute('data-theme',n);
     try{localStorage.setItem('gsc-tema',n)}catch(e){}
   })});
-  document.addEventListener('click',function(e){
-    var b=e.target.closest('.send');if(!b||b.classList.contains('done'))return;
-    var lab=b.getAttribute('data-label')||b.textContent;b.classList.add('done');b.textContent='Enviado ✓';
-    setTimeout(function(){b.classList.remove('done');b.textContent=lab},3000);
-  });
-  var cb=document.getElementById('copyBtn'),cp=document.getElementById('copied');
-  if(cb)cb.addEventListener('click',function(){
-    var ok=function(){cp.textContent='Número copiado'},no=function(){cp.textContent='(62) 99402-9664'};
-    try{navigator.clipboard.writeText('+55 62 99402-9664').then(ok,no)}catch(e){no()}
-    setTimeout(function(){cp.textContent=''},3000);
-  });
-  var bar=document.getElementById('mbar');if(!bar||!('IntersectionObserver' in window))return;
-  var st={heroi:true,diagnostico:false,contato:false};
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){st[e.target.id]=e.isIntersecting});
-    bar.classList.toggle('on',!st.heroi&&!st.diagnostico&&!st.contato)});
-  ['heroi','diagnostico','contato'].forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el)});
 })();
 (function(){
+  /* mesma lógica e pontuação de antes: Q1 e Q3 = 0/40 + marcadores "an"/"elim"; Q5 = 60/30/0.
+     Pronta >= 75 · Quase pronta >= 45 · Em análise se "an" e >= 45 · Ainda não se "elim" ou < 45.
+     f = o que arrumar, mostrado na tela quando a resposta elimina. sub = opção secundária (fundo mais discreto). */
   var Q=[
-   {t:"Qual sistema de gestão a clínica usa (há 6 meses ou mais)?",o:[["GestãoDS",0],["Outro, tem integração",0,"an"],["Outro, não sei",0,"an"],["Nenhum",0,"elim"]]},
-   {t:"Todo pagamento e orçamento é lançado no sistema?",o:[["Sim",0],["Não",0,"elim"]]},
-   {t:"Qual CRM vocês usam para os leads?",o:[["Kommo",40],["Outro, tem integração",40,"an"],["Outro, não sei",40,"an"],["Não usamos CRM",0,"elim"]]},
-   {t:"A clínica anuncia no Meta (Instagram/Facebook) todo mês?",o:[["Sim",0],["Não",0,"elim"]]},
-   {t:"A recepção marca no sistema quem compareceu e quem faltou?",o:[["Sempre",60],["Às vezes",30],["Não",0]]},
-   {t:"Tem alguém no comercial e uma pessoa responsável pelo sistema?",o:[["Sim",0],["Não",0,"elim"]]}
+   {t:"Qual sistema de gestão a clínica usa há 6 meses ou mais?",o:[["GestãoDS",0],["Clinicorp, Feegow ou Clínica nas Nuvens",0,"an"],["Outro sistema",0,"an","sub"],["Nenhum, ou há menos de 6 meses",0,"elim","sub"]],f:"Usar um sistema de gestão de clínica há pelo menos 6 meses."},
+   {t:"Todo pagamento e todo orçamento são lançados no sistema?",h:"Sem isso a Leitura não consegue calcular faturamento nem dinheiro parado.",o:[["Sim, sempre",0],["Não, ou só parte",0,"elim"]],f:"Lançar todo pagamento e todo orçamento no sistema de gestão."},
+   {t:"Onde o comercial registra os leads?",h:"Se for só WhatsApp hoje, o resultado diz como começar.",o:[["Kommo",40],["RD Station CRM, Pipedrive ou outro CRM",40,"an"],["Só no WhatsApp ou em planilha",0,"elim","sub"]],f:"Registrar os leads num CRM, não só no WhatsApp."},
+   {t:"A clínica anuncia no Meta (Instagram e Facebook) todo mês?",o:[["Sim",0],["Não, ou só de vez em quando",0,"elim"]],f:"Anunciar todo mês, mesmo com verba pequena."},
+   {t:"A recepção marca no sistema quem compareceu e quem faltou?",h:"É daqui que sai o cálculo de faltas e furos.",o:[["Sempre",60],["Às vezes",30],["Não",0]],f:"Marcar presença e falta em toda consulta.",c:"Marcar presença e falta em toda consulta (hoje: {r})."},
+   {t:"Tem alguém no comercial e uma pessoa responsável por acompanhar o sistema?",h:"Pode ser a gestora, a coordenadora ou a própria dona.",o:[["Sim, os dois",0],["Não, falta um dos dois",0,"elim"]],f:"Ter alguém no comercial e uma pessoa dona do sistema na clínica."}
   ];
   var URL_FN="https://tevpqngqzxcswmticjnr.supabase.co/functions/v1/diagnostico-site";
   var WA="https://wa.me/5562994029664";
   var box=document.getElementById('dg');if(!box)return;
   var stage=box.querySelector('[data-dg-stage]'),lab=box.querySelector('[data-dg-lab]'),back=box.querySelector('[data-dg-back]'),
       bar=box.querySelector('.dg-bar'),fill=bar.querySelector('i'),sym=box.querySelector('.dg-sym'),status=box.querySelector('[data-dg-status]');
-  var N=Q.length,TOTAL=N+1,ans=Q.map(function(){return null}),step=-1,busy=false;
+  var N=Q.length,TOTAL=N+2,ans=Q.map(function(){return null}),step=-1,busy=false;
   var dados={nome:'',clinica:'',whatsapp:'',email:''};
   var anim=document.documentElement.classList.contains('mo');
   function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -515,17 +479,26 @@ body.dgp{background:#0B1A2B}
     var s=0,elim=false,an=false;
     ans.forEach(function(a,i){if(a===null)return;var o=Q[i].o[a];s+=o[1];if(o[2]==='elim')elim=true;if(o[2]==='an')an=true});
     var r;
-    if(elim)r={v:"Ainda não é o momento",c:"bad",p:"Uma das respostas mostra que os dados ainda não sustentam a Leitura. Fale com a gente e receba a lista do que arrumar primeiro."};
-    else if(an&&s>=45)r={v:"Em análise",c:"info",p:"A clínica usa outro sistema. Vamos verificar a integração e responder em até 2 dias úteis."};
-    else if(s>=75)r={v:"Pronta",c:"ok",p:"A sua clínica pode começar. Implantação de R$ 1.500 e você pode concorrer a uma vaga de fundadora."};
-    else if(s>=45)r={v:"Quase pronta",c:"warn",p:"Dá para começar com a correção dos dados incluída na implantação (R$ 3.500, até 30 dias)."};
-    else r={v:"Ainda não é o momento",c:"bad",p:"Os dados ainda não sustentam a Leitura. Fale com a gente e receba a lista do que arrumar primeiro."};
+    if(elim)r={v:"Ainda não é o momento",c:"bad",p:"Uma das respostas mostra que os dados ainda não sustentam a Leitura. Isso tem conserto, e costuma ser rápido. O que arrumar primeiro:"};
+    else if(an&&s>=45)r={v:"Em análise",c:"info",p:"A clínica usa um sistema de gestão ou um CRM que ainda não conectamos. A gente confere a integração e responde em até 2 dias úteis, dizendo se conecta, em quanto tempo e por quanto. Sem compromisso."};
+    else if(s>=75)r={v:"Pronta",c:"ok",p:"A sua clínica tem o que a Leitura precisa. A implantação é a Conexão direta (R$ 1.500), e você pode pedir uma vaga de fundadora. Primeira Leitura em até 7 dias depois da conexão, ou devolvemos a implantação. O que acontece agora:"};
+    else if(s>=45)r={v:"Quase pronta",c:"warn",p:"Dá para começar. Falta um dado para ser \"Pronta\": a implantação é a Conexão com acerto (R$ 3.500), que inclui a correção dele em até 30 dias, com uma lista fechada do que arrumar e 2 retornos para conferir. A gente chama você em até 1 dia útil para mostrar a lista antes de qualquer contrato."};
+    else r={v:"Ainda não é o momento",c:"bad",p:"Os dados ainda não sustentam a Leitura. Isso tem conserto, e costuma ser rápido. O que arrumar primeiro:"};
     r.s=s;return r;
   }
   function respostas(){return Q.map(function(q,i){return [q.t,ans[i]===null?'(sem resposta)':q.o[ans[i]][0]]})}
+  /* o que arrumar: só os itens ligados às respostas que eliminam (ou pontuam zero); se nenhum, a lista inteira */
+  function faltas(r){
+    var l=[];
+    ans.forEach(function(a,i){if(a===null)return;var o=Q[i].o[a];
+      if(o[2]==='elim')l.push(Q[i].f);
+      else if(Q[i].c&&o[1]<60&&r.c!=='ok')l.push(Q[i].c.replace('{r}',o[0].toLowerCase()))});
+    if(!l.length)l=Q.map(function(q){return q.f});
+    return l;
+  }
   function waLink(r){
     var resumo=respostas().map(function(x){return '- '+x[0]+' '+x[1]}).join('\n');
-    return WA+'?text='+encodeURIComponent('Olá! Fiz o diagnóstico no site da Gestão Sem Caos.'+(dados.clinica?'\nClínica: '+dados.clinica:'')+'\nResultado: '+r.v+' ('+r.s+' pontos)\n'+resumo);
+    return WA+'?text='+encodeURIComponent('Olá! Fiz o diagnóstico '+PRODUTO+' no site da Gestão Sem Caos.'+(dados.clinica?'\nClínica: '+dados.clinica:'')+'\nResultado: '+r.v+'\n'+resumo);
   }
 
   function chrome(){
@@ -555,8 +528,8 @@ body.dgp{background:#0B1A2B}
 
   function question(i,dir){
     var q=Q[i];
-    var h='<div class="dg-step"><h3 id="dg-q" tabindex="-1">'+esc(q.t)+'</h3><div class="dg-opts" role="group" aria-labelledby="dg-q">'+
-      q.o.map(function(o,j){return '<button type="button" class="dg-opt" data-a="'+j+'" aria-pressed="'+(ans[i]===j)+'"><kbd aria-hidden="true">'+String.fromCharCode(65+j)+'</kbd>'+esc(o[0])+'</button>'}).join('')+
+    var h='<div class="dg-step"><h3 id="dg-q" tabindex="-1">'+esc(q.t)+'</h3>'+(q.h?'<p class="dg-help">'+esc(q.h)+'</p>':'')+'<div class="dg-opts" role="group" aria-labelledby="dg-q">'+
+      q.o.map(function(o,j){return '<button type="button" class="dg-opt'+(o[3]==='sub'?' sub':'')+'" data-a="'+j+'" aria-pressed="'+(ans[i]===j)+'"><kbd aria-hidden="true">'+String.fromCharCode(65+j)+'</kbd>'+esc(o[0])+'</button>'}).join('')+
       '</div></div>';
     mount(h,dir,true);
     status.textContent='Pergunta '+(i+1)+' de '+N;
@@ -565,15 +538,15 @@ body.dgp{background:#0B1A2B}
     return '<div class="dg-f'+(full?' full':'')+'"><label for="dg-'+id+'">'+label+'</label><input id="dg-'+id+'" name="'+id+'" type="'+type+'" value="'+esc(dados[id])+'" '+extra+' aria-describedby="dg-'+id+'-e"><span class="dg-err" id="dg-'+id+'-e"></span></div>';
   }
   function contact(dir){
-    var h='<div class="dg-step"><h3 tabindex="-1">Pronto! Para onde mandamos o resultado?</h3>'+
-      '<p>Você vê a nota na hora e recebe uma cópia no e-mail, com as suas respostas.</p>'+
+    var h='<div class="dg-step"><h3 tabindex="-1">Pronto. Para onde mandamos o resultado?</h3>'+
+      '<p>Você vê o resultado na tela agora e recebe a cópia no e-mail, com as suas respostas e a lista do que já está pronto e do que falta.</p>'+
       '<form class="dg-form" novalidate>'+
       field('nome','Seu nome','text','autocomplete="name" maxlength="80" required')+
       field('clinica','Clínica <i>(opcional)</i>','text','autocomplete="organization" maxlength="120"')+
-      field('whatsapp','WhatsApp <i>(opcional)</i>','tel','autocomplete="tel" inputmode="tel" maxlength="30" placeholder="(62) 99999-9999"')+
-      field('email','E-mail','email','autocomplete="email" inputmode="email" maxlength="160" required')+
+      field('whatsapp','WhatsApp <i>(opcional)</i>','tel','autocomplete="tel" inputmode="tel" maxlength="30" placeholder="(DDD) 99999-9999"')+
+      field('email','E-mail <i>(para a cópia com a lista do que arrumar)</i>','email','autocomplete="email" inputmode="email" maxlength="160" required')+
       '<div class="dg-hp" aria-hidden="true"><label for="dg-site">Site</label><input id="dg-site" name="site" type="text" tabindex="-1" autocomplete="off"></div>'+
-      '<div class="dg-sub"><button class="btn btn-cta" type="submit">Ver meu resultado</button><small>Usamos seus dados só para mandar o resultado e falar sobre o diagnóstico.</small></div>'+
+      '<div class="dg-sub"><button class="btn btn-cta" type="submit">Ver meu resultado</button><small>Usamos seus dados só para mandar o resultado e falar sobre ele. Nada de lista de e-mail.</small></div>'+
       '</form></div>';
     mount(h,dir,true);
     status.textContent='Último passo: seus dados de contato.';
@@ -586,7 +559,7 @@ body.dgp{background:#0B1A2B}
     if(!v('nome'))errs.nome='Escreva o seu nome.';
     var em=v('email');
     if(!em)errs.email='Escreva o seu e-mail para receber o resultado.';
-    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em))errs.email='Confira o e-mail. Ele precisa ter @ e um final como .com.br';
+    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em))errs.email='Confira o e-mail: precisa ter @ e um final como .com.br';
     var w=v('whatsapp').replace(/\D/g,'');
     if(w&&(w.length<10||w.length>13))errs.whatsapp='Confira o número, com DDD.';
     ['nome','email','whatsapp'].forEach(function(n){
@@ -614,24 +587,25 @@ body.dgp{background:#0B1A2B}
         var msg=(err&&err.srv&&err.message&&err.message.length<120)?err.message+' ':'';
         if(msg&&/não foi possível enviar/i.test(msg))msg='';
         var d=document.createElement('div');d.className='dg-fail';d.setAttribute('role','alert');
-        d.innerHTML='<span><b>Não conseguimos enviar agora.</b> '+esc(msg)+'Você pode tentar de novo ou mandar o resultado pelo WhatsApp.</span>'+
+        d.innerHTML='<span><b>Não conseguimos enviar agora.</b> '+esc(msg)+'Você pode tentar de novo ou mandar o resultado pelo WhatsApp. Suas respostas ficam guardadas nesta tela.</span>'+
           '<a class="btn btn-cta btn-sm" href="'+waLink(r)+'" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Mandar no WhatsApp</a>';
         f.appendChild(d);
       });
   }
   function result(r,email){
     step=N+1;
+    var extra='';
+    if(r.c==='ok')extra='<ol class="dg-prox"><li><i>1</i><span><b>Mensagem nossa em até 1 dia útil</b>, no WhatsApp, para marcar a conexão.</span></li><li><i>2</i><span><b>Você autoriza o acesso aos sistemas</b> nduas chamadas de até 1 hora com você (ou com quem acompanha o sistema) e quem cuida dos anúncios.</span></li><li><i>3</i><span><b>Primeira Leitura em até 7 dias</b>: o que saiu do trilho, quanto vale e quem resolve.</span></li></ol>';
+    else if(r.c==='warn')extra='<p class="dg-sub-p" style="font-weight:700;color:var(--ink)">O que a implantação corrige nos primeiros 30 dias:</p><ul class="dg-lista">'+faltas(r).map(function(f){return '<li><i aria-hidden="true"></i><span>'+esc(f)+'</span></li>'}).join('')+'</ul><p class="dg-sub-p">Prefere entrar como "Pronta"? Arrume esse dado, refaça o diagnóstico em 30 dias e a implantação cai para R$ 1.500, com vaga de fundadora se ainda houver.</p>';
+    else if(r.c==='bad')extra='<ul class="dg-lista">'+faltas(r).map(function(f){return '<li><i aria-hidden="true"></i><span>'+esc(f)+'</span></li>'}).join('')+'</ul><p class="dg-sub-p">Quando '+(faltas(r).length>1?'esses pontos estiverem resolvidos':'isso estiver resolvido')+', refaça o diagnóstico. Se quiser ajuda para começar, chame no WhatsApp.</p>';
     var h='<div class="dg-step dg-res"><svg class="mark mo-logo mo-now" viewBox="78 472 138 136" aria-hidden="true">'+box.querySelector('.dg-sym').innerHTML+'</svg>'+
-      (r.c==='bad'?'':'<span class="dg-score"><span class="ember" data-dg-score>'+r.s+'</span><small>/100</small></span>')+
       '<h3 tabindex="-1" class="dg-v '+r.c+'"><i aria-hidden="true"></i>'+esc(r.v)+'</h3>'+
-      '<p>'+esc(r.p)+'</p>'+
-      '<span class="dg-mail"><svg aria-hidden="true"><use href="#i-check"/></svg>Enviamos o resultado para '+esc(email)+'</span><br>'+
-      '<a class="btn btn-cta btn-lg mo-shine" href="'+waLink(r)+'" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Conversar sobre o resultado no WhatsApp</a>'+
+      '<p>'+esc(r.p)+'</p>'+extra+
+      '<span class="dg-mail"><svg aria-hidden="true"><use href="#i-check"/></svg>Enviamos uma cópia para '+esc(email)+'</span><br>'+
+      '<a class="btn btn-cta btn-lg" href="'+waLink(r)+'" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Conversar sobre o resultado no WhatsApp</a>'+
       '<button type="button" class="dg-redo" data-dg-redo>Refazer o diagnóstico</button></div>';
     mount(h,1,true);
-    status.textContent='Resultado: '+r.v+(r.c==='bad'?'':', '+r.s+' pontos')+'. Enviamos uma cópia para o seu e-mail.';
-    var sc=stage.querySelector('[data-dg-score]');
-    if(sc&&anim&&window.moCount&&r.s>0&&r.c!=='bad')window.moCount(sc);
+    status.textContent='Resultado: '+r.v+'. Enviamos uma cópia para o seu e-mail.';
   }
 
   stage.addEventListener('click',function(e){
@@ -643,6 +617,7 @@ body.dgp{background:#0B1A2B}
     busy=true;setTimeout(function(){busy=false;if(step===i)go(i+1,1)},anim?240:60);
   });
   back.addEventListener('click',function(){if(busy||step<0||step>N)return;go(step-1,-1)});
+  document.addEventListener('keydown',function(e){if(step<0||step>=N||busy||e.metaKey||e.ctrlKey||e.altKey||e.key.length!==1)return;var k=e.key.toUpperCase().charCodeAt(0)-65;var b=stage.querySelectorAll('.dg-opt')[k];if(b)b.click()});
   chrome();
 })();
 </script>
