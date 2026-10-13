@@ -1285,29 +1285,42 @@ h3{font-size:22px;font-weight:700;line-height:1.2;letter-spacing:-.02em}
 /* link em forma de botão (abre o e-mail de exemplo) */
 button.link-arrow{border:0;background:none;padding:0;cursor:pointer;font-size:inherit;font-family:inherit}
 /* e-mail das 7h de exemplo (modal) */
-.mail-dlg{width:min(640px,calc(100% - 32px));max-height:min(88vh,900px);margin:auto;padding:0;border:0;border-radius:20px;background:var(--surface);color:var(--ink);box-shadow:var(--sh-3);overflow:auto;text-align:left}
+/* e-mail das 7h de exemplo: moldura de cliente de e-mail (cores do site) + o HTML real do e-mail (cores fixas, como num e-mail de verdade) */
+.mail-dlg{width:min(640px,calc(100% - 32px));max-height:min(90vh,940px);margin:auto;padding:0;border:0;border-radius:20px;background:var(--surface);color:var(--ink);box-shadow:var(--sh-3);overflow:auto;text-align:left}
 .mail-dlg::backdrop{background:rgba(7,18,31,.62)}
-.mail-top{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;border-bottom:1px solid var(--line);background:var(--surface)}
-.mail-top b{display:block;font:600 16px/1.25 var(--f-head);letter-spacing:-.01em;color:var(--ink)}
+.mail-top{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;border-bottom:1px solid var(--line);background:var(--surface)}
+.mail-top b{display:block;font:600 15px/1.25 var(--f-head);letter-spacing:-.01em;color:var(--ink)}
 .mail-top small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
 .mail-x{width:36px;height:36px;flex:none;border-radius:999px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer}
 .mail-x svg{width:16px;height:16px}
-.mail-meta{display:grid;gap:3px;padding:16px 20px 0;font-size:13.5px;color:var(--muted)}
-.mail-meta b{color:var(--ink);font-weight:600}
-.mail-body{padding:16px 20px 20px;font-size:15px;line-height:1.6;color:var(--ink-2)}
-.mail-body h4{margin:0 0 10px;font:600 20px/1.25 var(--f-head);letter-spacing:-.02em;color:var(--ink)}
-.mail-body p{margin:0 0 12px}
-.mail-item{margin:0 0 10px;padding:12px 14px;border-radius:12px;background:var(--surface-2);border:1px solid var(--line)}
-.mail-item.crit{background:var(--accent-soft);border-color:var(--peach)}
-.mail-item b{display:block;color:var(--ink);font-weight:700;line-height:1.35}
-.mail-item small{display:block;font-size:13.5px;color:var(--ink-2);margin-top:4px}
-.mail-item em{display:block;font-style:normal;font-size:13.5px;color:var(--ink);margin-top:6px}
-.mail-item em span{color:var(--muted)}
-.mail-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 12px}
-.mail-kpis div{padding:10px 12px;border-radius:12px;border:1px solid var(--line);font-size:12.5px;color:var(--muted)}
-.mail-kpis b{display:block;font:600 18px/1.2 var(--f-head);color:var(--ink);letter-spacing:-.02em;margin-top:2px}
-.mail-foot{padding:0 20px 20px;font-size:13px;color:var(--muted)}
-@media (max-width:520px){.mail-kpis{grid-template-columns:1fr}}
+.mail-ass{margin:0;padding:18px 20px 0;font:600 20px/1.25 var(--f-head);letter-spacing:-.02em;color:var(--ink)}
+.mail-cli{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:start;padding:14px 20px 16px;font-size:13.5px;color:var(--muted)}
+.mail-av{width:40px;height:40px;border-radius:999px;background:#13283f;display:grid;place-items:center}
+.mail-av svg{width:22px;height:22px}
+.mail-cli>div{min-width:0;overflow-wrap:anywhere}
+.mail-cli b{display:block;font-weight:600;color:var(--ink)}
+.mail-cli b span{font-weight:400;color:var(--muted)}
+.mail-cli small{display:block;font-size:12.5px;color:var(--muted);margin-top:1px}
+.mail-hora{font-size:12.5px;color:var(--muted);white-space:nowrap;padding-top:2px}
+.mail-html{background:#f2f2f2;padding:28px 16px;font-family:'Plus Jakarta Sans','Segoe UI',Helvetica,Arial,sans-serif;line-height:normal;color:#46546a}
+.mail-html table{border-collapse:collapse}
+.mail-html p{margin:0 0 12px}
+.mail-html ul{margin:0 0 12px;padding-left:18px;font-size:13px;line-height:1.6;color:#46546a}
+.mail-html li{margin-bottom:6px}
+.mail-html a{color:inherit;text-decoration:none}
+.mail-html .mail-pn{text-transform:lowercase}
+.mail-foot{padding:14px 20px 18px;margin:0;font-size:12.5px;line-height:1.5;color:var(--muted)}
+@media (max-width:520px){
+  .mail-dlg{width:calc(100% - 20px)}
+  .mail-ass{font-size:18px;padding:16px 16px 0}
+  .mail-cli{padding:12px 16px 14px;grid-template-columns:36px 1fr}
+  .mail-av{width:36px;height:36px}
+  .mail-hora{grid-column:2;white-space:normal;padding-top:0}
+  .mail-html{padding:16px 8px}
+  .mail-html .mail-pad{padding-left:20px!important;padding-right:20px!important}
+  .mail-html .mail-k{display:block;width:auto!important}
+  .mail-foot{padding:12px 16px 16px}
+}
 /* quem faz: a pendência do fundador só aparece na prévia (trocar data-fundador para "ok" ao publicar) */
 .org-quem .pend{display:none}
 [data-fundador="ok"] .pend{display:inline}
@@ -1372,6 +1385,38 @@ button.link-arrow{border:0;background:none;padding:0;cursor:pointer;font-size:in
 .h1-cursor{display:inline-block;width:.06em;height:.9em;margin-left:.04em;background:var(--o1);vertical-align:-.08em;animation:h1-blink 1s steps(2) infinite}
 @keyframes h1-blink{to{opacity:0}}
 @media (prefers-reduced-motion:reduce){.h1-cursor{display:none}}
+.hero-ask{margin:26px 0 0;font:600 17px/1.4 var(--f-body);color:var(--ink-2);max-width:30ch}
+.hero h1#h1{margin-top:10px;font-size:clamp(34px,4vw,54px)}
+.hero-ans{margin:14px 0 0;font:700 clamp(22px,2.2vw,30px)/1.1 var(--f-head);letter-spacing:-.03em}
+@media (max-width:760px){.hero-ask{font-size:15.5px;margin-top:18px}.hero h1#h1{font-size:clamp(27px,7.6vw,32px)}.hero-ans{font-size:22px}}
+
+/* comparação: visual novo (branco, navy, laranja vivo na coluna Cedo; marcas em sequência) */
+.cmp{border:1px solid var(--line);box-shadow:none;border-radius:16px}
+.cmp-h{background:#fff;border-bottom:1px solid var(--line)}
+.cmp-h span{font:600 13px/1.3 var(--f-body);color:var(--ink-2)}
+.cmp-h .me{background:var(--o1);color:#141414;font:700 17px/1 var(--f-head)}
+.cmp-r span{font-weight:600}
+.cmp-r{transition:background .2s}
+.cmp-r:hover{background:#FAFAF9}
+.cmp-r i::before{width:20px;height:20px;transition:transform .35s cubic-bezier(.22,1,.36,1),opacity .35s}
+.cmp-r i.ok::before{background:var(--n2)}
+.cmp-r i.half::before{width:20px;height:20px;box-shadow:inset 0 0 0 2px var(--n2);-webkit-mask:none;mask:none;background:linear-gradient(90deg,var(--n2) 0 50%,transparent 50% 100%)}
+.cmp-r i.no::before{width:12px;height:2px;background:#D6D3CE}
+.cmp-r i.me{background:#FFF1EA}
+.cmp-r i.me.ok::before{background:var(--o1);width:26px;height:26px}
+@media (prefers-reduced-motion:no-preference){
+  .cmp:not(.go) .cmp-r i::before{transform:scale(0);opacity:0}
+  .cmp.go .cmp-r i::before{transform:scale(1);opacity:1}
+  .cmp.go .cmp-r:nth-child(1) i::before{transition-delay:.05s}
+  .cmp.go .cmp-r:nth-child(2) i::before{transition-delay:.2s}
+  .cmp.go .cmp-r:nth-child(3) i::before{transition-delay:.35s}
+  .cmp.go .cmp-r:nth-child(4) i::before{transition-delay:.5s}
+  .cmp.go .cmp-r:nth-child(5) i::before{transition-delay:.65s}
+  .cmp.go .cmp-r:nth-child(6) i::before{transition-delay:.8s}
+  .cmp.go .cmp-r i.me.ok::before{transition-delay:1.1s;animation:cmp-pop .5s 1.1s both}
+  @keyframes cmp-pop{0%{transform:scale(0)}70%{transform:scale(1.25)}100%{transform:scale(1)}}
+}
+.cmp-leg i.ok::before{background:var(--n2)}.cmp-leg i.half::before{box-shadow:inset 0 0 0 2px var(--n2)}
 </style>
 </head>
 <body>
@@ -1436,7 +1481,9 @@ button.link-arrow{border:0;background:none;padding:0;cursor:pointer;font-size:in
     <div class="hero-copy">
       <svg class="hero-mark mo-logo mo-now" viewBox="78 472 138 136" aria-hidden="true" style="--mo-ld:0ms"><path class="mo-raios" fill="#F2752E" d="M212.1,545.4l-39.2,3.7,29.6,26.2c-3.6,5-2.3,3.2-5.9,8.2l-33.9-20.2,8.6,38.7c-5.8,1.9-3.7,1.2-9.5,3.1l-12.5-29.2,20.3-47.1,3.5-8.1-8.8.9-50.5,5.2-23.9-21.2c3.6-5,2.3-3.2,5.9-8.2l33.9,20.2-8.6-38.7c5.8-1.9,3.7-1.2,9.5-3.1l15.6,36.4,15.6-36.4c5.8,1.9,3.7,1.2,9.5,3.1l-8.7,38.7,33.9-20.2c3.6,5,2.3,3.2,5.9,8.2l-29.6,26.2,39.2,3.7v10.1Z"/><polygon class="mo-base" fill="#FCBA75" points="119.1 531.3 80.8 535.3 80.8 545.4 120 549 86 578.9 91.9 587.1 130.2 563.2 121.6 601.8 131.1 604.9 146.5 569.2 164.8 526.6 119.1 531.3"/></svg>
       <p class="hero-eyebrow mo-h" style="--mo-d:60ms"><b data-pn>Cedo</b> · para clínicas de estética médica que anunciam todo mês</p>
-      <h1 id="h1" class="mo-h" style="--mo-d:140ms"><span class="h1-q" id="h1-q">Quanto da sua verba de anúncio virou paciente no mês passado?</span> <span class="ember">O <span data-pn>Cedo</span> responde. Todo dia às 7h.</span></h1>
+      <p class="hero-ask mo-h" style="--mo-d:100ms">Quantas dessas perguntas você consegue responder hoje, na sua clínica?</p>
+      <h1 id="h1" class="mo-h" style="--mo-d:140ms"><span class="h1-q" id="h1-q">Quanto da sua verba de anúncio virou paciente no mês passado?</span></h1>
+      <p class="hero-ans ember mo-h" style="--mo-d:220ms">O <span data-pn>Cedo</span> responde. Todo dia às 7h.</p>
       
       
       <div class="hero-cta mo-h" style="--mo-d:300ms">
@@ -1654,9 +1701,9 @@ button.link-arrow{border:0;background:none;padding:0;cursor:pointer;font-size:in
 <section class="sec tese" id="tese" aria-labelledby="h-tese">
   <div class="wrap">
     <div class="sec-head mo-stagger">
-      <span class="kicker">O olhar de uma consultora, todo dia</span>
-      <h2 id="h-tese">O que uma consultora veria olhando os seus números, <span class="tone">o <span data-pn>Cedo</span> vê todo dia.</span></h2>
-      <p class="lead">Uma consultora boa pega os seus dados, cruza anúncio, agenda, comercial e caixa, e te diz onde está o problema e quem resolve. Uma vez por mês, com o que a clínica conseguiu juntar. O <span data-pn>Cedo</span> faz essa leitura toda manhã, com os dados de ontem. Um exemplo, com dados fictícios da Clínica Orvalho:</p>
+      <span class="kicker">O olhar de uma consultoria, todo dia</span>
+      <h2 id="h-tese">O que uma consultoria veria olhando os seus números, <span class="tone">o <span data-pn>Cedo</span> vê todo dia.</span></h2>
+      <p class="lead">Uma boa consultoria pega os seus dados, cruza anúncio, agenda, comercial e caixa, e te diz onde está o problema e quem resolve. Uma vez por mês, com o que a clínica conseguiu juntar. O <span data-pn>Cedo</span> faz essa leitura toda manhã, com os dados de ontem. Um exemplo, com dados fictícios da Clínica Orvalho:</p>
     </div>
     <ol class="chain mo-stagger">
       <li class="chain-s"><span class="chain-n" aria-hidden="true">1</span><span class="kicker">O dado</span><b>Fios de PDO trouxe 14 consultas no mês. Só 3 fecharam.</b><small>Verba da campanha: R$ 2.100. Consultas: 14. Orçamentos emitidos: 14. Fechados: 3. Anúncios, CRM e agenda, cruzados.</small></li>
@@ -2044,7 +2091,7 @@ button.link-arrow{border:0;background:none;padding:0;cursor:pointer;font-size:in
       <div class="ask-copy mo-stagger">
         <span class="kicker">Plano Clínica Completa</span>
         <h3>Pergunte ao <span data-pn>Cedo</span>. Em português, como numa conversa.</h3>
-        <p>O botão redondo fica no canto de toda tela. Pergunte o que perguntaria a uma consultora: a resposta cruza agenda, metas, comercial e anúncios da sua clínica, em segundos, e leva direto para a lista certa.</p>
+        <p>O botão redondo fica no canto de toda tela. Pergunte o que perguntaria a um consultor: a resposta cruza agenda, metas, comercial e anúncios da sua clínica, em segundos, e leva direto para a lista certa.</p>
         <p class="ask-fab"><span class="bi-fab" aria-hidden="true"><span class="bi-cedo-ic"><svg viewBox="78 472 138 136"><use href="#i-logo-mono"/></svg></span></span>Toque numa pergunta para ver a resposta.</p>
         <p class="ask-foot">Responde só com os dados da sua clínica. Não inventa número: quando não sabe, diz que não sabe.</p>
       </div>
@@ -2285,19 +2332,97 @@ button.link-arrow{border:0;background:none;padding:0;cursor:pointer;font-size:in
   </div>
 </footer>
 <dialog class="mail-dlg" id="mailDlg" aria-labelledby="mail-t">
-  <div class="mail-top"><div><b id="mail-t">E-mail das 7h · exemplo</b><small>Clínica Orvalho, dados fictícios. É assim que a Leitura chega todo dia na caixa de entrada da dona.</small></div><button class="mail-x" type="button" data-mail-close aria-label="Fechar"><svg aria-hidden="true"><use href="#i-x"/></svg></button></div>
-  <div class="mail-meta"><span><b>De:</b> <span data-pn>Cedo</span> · Clínica Orvalho</span><span><b>Para:</b> Dra. Helena (dona)</span><span><b>Assunto:</b> Leitura de sexta, 9/10: 3 pontos, 1 crítico · R$ 23.900 vencendo em 7 dias</span></div>
-  <div class="mail-body">
-    <h4>Bom dia, Dra. Helena. 3 pontos pedem atenção na clínica. 1 crítico.</h4>
-    <div class="mail-item crit"><b>1 · Crítico · 6 orçamentos vencem em 7 dias e valem R$ 23.900</b><small>Fios de PDO trouxe 14 consultas no mês e só 3 fecharam: o anúncio funciona, o que trava é o orçamento. 11 orçamentos da campanha seguem abertos (≈ R$ 52.250).</small><em>Fazer · Paula (Comercial): <span>ligar hoje para os 6, com condição de pagamento. A lista já está no "Meu dia" dela, com o WhatsApp pronto.</span></em></div>
-    <div class="mail-item"><b>2 · 14 pacientes no ponto de refazer toxina ≈ R$ 26.600</b><small>14 × R$ 1.900. Quem passa de 30 dias do ponto costuma refazer em outra clínica.</small><em>Fazer · Renata (Recepção): <span>chamar com a mensagem pronta.</span></em></div>
-    <div class="mail-item"><b>3 · 9 leads sem resposta há mais de 2 h</b><small>O que espera há mais tempo é um lead de bioestimulador, há 3 h 40.</small><em>Fazer · Júlia (SDR): <span>responder agora, do que espera há mais tempo.</span></em></div>
-    <p style="margin-top:16px"><b style="color:var(--ink)">Ontem, quinta 8/10, em números</b></p>
-    <div class="mail-kpis"><div>Faturamento 1–8 out<b>R$ 80.222</b>32% da meta de R$ 250.000 · 5,8% acima de 1–8/set</div><div>Pacientes novas que vieram<b>27</b>3,5% acima de 1–8/set</div><div>Comparecimento<b>84,2%</b>154 de 183 marcados · 4,0 p.p. abaixo de 1–8/set</div></div>
-    <p>Dentro do normal: crescimento, comparecimento. Semana 2: Júlia, Paula e Renata abaixo do ritmo da meta; o detalhe está em Metas.</p>
-    <p style="margin:0">Toque no "i" de qualquer número no sistema para ver a conta por trás dele.</p>
+  <div class="mail-top"><div><b id="mail-t">E-mail das 7h · exemplo</b><small>Clínica Orvalho, dados fictícios. O mesmo modelo que a dona recebe todo dia.</small></div><button class="mail-x" type="button" data-mail-close aria-label="Fechar"><svg aria-hidden="true"><use href="#i-x"/></svg></button></div>
+  <h3 class="mail-ass">Resumo de outubro até hoje</h3>
+  <div class="mail-cli">
+    <div class="mail-av" aria-hidden="true"><svg><use href="#i-logo"/></svg></div>
+    <div><b><span data-pn>Cedo</span> · Clínica Orvalho <span>&lt;leitura@orvalho.appcedo.gestaosemcaos.com.br&gt;</span></b><small>para Dra. Helena (dona)</small></div>
+    <time class="mail-hora" datetime="2026-10-09T07:00:00-03:00">sex., 9 de out., 07:00</time>
   </div>
-  <p class="mail-foot">Nenhum nome de paciente vai no e-mail: as listas ficam no sistema, para quem tem acesso por função. Fechar com Esc ou tocando fora.</p>
+  <div class="mail-html">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:0">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px">
+    <tr><td class="mail-pad" style="background:#13283f;border-radius:24px 24px 0 0;padding:22px 40px">
+      <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+        <td style="width:28px;height:28px"><svg width="28" height="28" aria-hidden="true" style="display:block"><use href="#i-logo"/></svg></td>
+        <td style="padding-left:10px;font-size:15px;color:#ffffff">orvalho <span style="color:#6b7586">· <span class="mail-pn" data-pn>Cedo</span></span></td>
+      </tr></table>
+    </td></tr>
+    <tr><td style="background:#ffffff;border-radius:0 0 24px 24px;padding:8px 0 32px">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+        <tr><td class="mail-pad" style="padding:28px 40px 8px;font-size:24px;line-height:1.25;color:#13283f;letter-spacing:-0.3px">Bom dia, Helena</td></tr>
+        <tr><td class="mail-pad" style="padding:8px 40px 16px;font-size:15px;line-height:1.65;color:#46546a">
+          <p>3 pontos pedem atenção na clínica hoje, 1 crítico. No fim, os números de outubro até ontem, quinta 8/10.</p>
+          <div style="margin:0 0 14px;padding:12px 16px;border:1px solid #ff9f40;border-radius:14px;font-size:13px;line-height:1.6;color:#13283f">
+            <b>1 · Crítico · 6 orçamentos vencem em 7 dias e valem R$ 23.900</b>
+            <ul style="margin:6px 0 0;color:#46546a">
+              <li>Fios de PDO trouxe 14 consultas no mês e só 3 fecharam: o anúncio funciona, o que trava é o orçamento. 11 orçamentos da campanha seguem abertos (≈ R$ 52.250).</li>
+              <li style="margin-bottom:0"><b style="color:#13283f">Fazer · Paula (Comercial):</b> ligar hoje para os 6, com condição de pagamento. A lista já está no "Meu dia" dela, com o WhatsApp pronto.</li>
+            </ul>
+          </div>
+          <p><b style="color:#13283f">2 · 14 pacientes no ponto de refazer toxina ≈ R$ 26.600</b></p>
+          <ul>
+            <li>14 × R$ 1.900. Quem passa de 30 dias do ponto costuma refazer em outra clínica.</li>
+            <li><b style="color:#13283f">Fazer · Renata (Recepção):</b> chamar com a mensagem pronta.</li>
+          </ul>
+          <p><b style="color:#13283f">3 · 9 leads sem resposta há mais de 2 h</b></p>
+          <ul>
+            <li>O que espera há mais tempo é um lead de bioestimulador, há 3 h 40.</li>
+            <li><b style="color:#13283f">Fazer · Júlia (SDR):</b> responder agora, do que espera há mais tempo.</li>
+          </ul>
+          <p>Os números de outubro até ontem, quinta 8/10:</p>
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:4px -6px 8px">
+            <tr>
+              <td class="mail-k" width="50%" style="padding:6px">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background:#13283f;border-radius:18px;padding:16px 18px">
+                  <div style="font-size:12px;color:#c5ccd6">Faturado no mês</div>
+                  <div style="font-size:22px;color:#ffffff;margin-top:4px">R$ 80.222,00</div>
+                  <div style="font-size:11px;color:#8a97ab;margin-top:2px">32% da meta de R$ 250.000</div>
+                </td></tr></table>
+              </td>
+              <td class="mail-k" width="50%" style="padding:6px">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background:#f34405;border-radius:18px;padding:16px 18px">
+                  <div style="font-size:12px;color:#141414">Novos pacientes</div>
+                  <div style="font-size:22px;color:#141414;margin-top:4px">27</div>
+                  <div style="font-size:11px;color:#141414;margin-top:2px">3,5% acima de 1–8/set</div>
+                </td></tr></table>
+              </td>
+            </tr>
+            <tr>
+              <td class="mail-k" width="50%" style="padding:6px">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background:#f2f2f2;border-radius:18px;padding:16px 18px">
+                  <div style="font-size:12px;color:#46546a">Comparecimento</div>
+                  <div style="font-size:22px;color:#13283f;margin-top:4px">84,2%</div>
+                  <div style="font-size:11px;color:#6b7586;margin-top:2px">154 de 183 marcados</div>
+                </td></tr></table>
+              </td>
+              <td class="mail-k" width="50%" style="padding:6px">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background:#f2f2f2;border-radius:18px;padding:16px 18px">
+                  <div style="font-size:12px;color:#46546a">Leads no mês</div>
+                  <div style="font-size:22px;color:#13283f;margin-top:4px">96</div>
+                  <div style="font-size:11px;color:#6b7586;margin-top:2px">R$ 3.648,00 investidos · R$ 38,00 por conversa</div>
+                </td></tr></table>
+              </td>
+            </tr>
+          </table>
+          <p style="margin:0">Dentro do normal: crescimento e comparecimento. Nenhum nome de paciente vai neste e-mail: as listas ficam no sistema, para quem tem acesso por função.</p>
+        </td></tr>
+        <tr><td class="mail-pad" style="padding:8px 40px 8px">
+          <table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="background:#f34405;border-radius:999px">
+            <a style="display:inline-block;padding:14px 28px;font-size:15px;color:#141414;font-weight:600">Abrir o <span data-pn>Cedo</span></a>
+          </td></tr></table>
+          <p style="margin:16px 0 0;font-size:12px;color:#6b7586;line-height:1.6">Se o botão não abrir, copie este endereço:<br><a style="color:#46546a;word-break:break-all">https://orvalho.appcedo.gestaosemcaos.com.br</a></p>
+        </td></tr>
+      </table>
+    </td></tr>
+    <tr><td class="mail-pad" style="padding:20px 40px;font-size:12px;line-height:1.6;color:#6b7586;text-align:center">
+      Resumo enviado todo dia pela manhã. Dá para desligar em Ajustes → Meu perfil.<br><span data-pn>Cedo</span> da Clínica Orvalho · feito pela Gestão Sem Caos<br>
+      <a style="color:#6b7586">orvalho.appcedo.gestaosemcaos.com.br</a>
+    </td></tr>
+  </table>
+</td></tr></table>
+  </div>
+  <p class="mail-foot">Exemplo com dados fictícios. Fechar com Esc ou tocando fora.</p>
 </dialog>
 <div class="mbar" id="mbar">
   <p class="mbar-t"><b>Clínica · R$ 990/mês</b><span data-vagas-txt>Primeira Leitura em 7 dias</span></p>
@@ -2605,11 +2730,20 @@ var PRODUTO='Cedo';
   var cur=document.createElement('span');cur.className='h1-cursor';cur.setAttribute('aria-hidden','true');
   var i=0,parado=false;document.addEventListener('visibilitychange',function(){parado=document.hidden});
   function escreve(txt,k,fim){if(parado){setTimeout(function(){escreve(txt,k,fim)},400);return}
-    el.textContent=txt.slice(0,k);el.appendChild(cur);if(k<txt.length)setTimeout(function(){escreve(txt,k+1,fim)},28+Math.random()*30);else fim()}
-  function apaga(txt,k,fim){el.textContent=txt.slice(0,k);el.appendChild(cur);if(k>0)setTimeout(function(){apaga(txt,k-1,fim)},12);else fim()}
+    el.textContent=txt.slice(0,k);el.appendChild(cur);if(k<txt.length)setTimeout(function(){escreve(txt,k+1,fim)},55+Math.random()*45);else fim()}
+  function apaga(txt,k,fim){el.textContent=txt.slice(0,k);el.appendChild(cur);if(k>0)setTimeout(function(){apaga(txt,k-1,fim)},16);else fim()}
   function ciclo(){var txt=Q[i];escreve(txt,el.textContent.length<=txt.length&&txt.indexOf(el.textContent)===0?el.textContent.length:0,function(){
-    setTimeout(function(){apaga(txt,txt.length,function(){i=(i+1)%Q.length;ciclo()})},3600)})}
+    setTimeout(function(){apaga(txt,txt.length,function(){i=(i+1)%Q.length;ciclo()})},5200)})}
   el.appendChild(cur);setTimeout(ciclo,900);
+})();
+</script>
+
+<script>
+/* comparação: as marcas aparecem linha a linha, e a coluna Cedo por último, toda vez que a tabela entra na tela */
+(function(){
+  var c=document.querySelector('.cmp');if(!c||!('IntersectionObserver' in window))return;
+  if(!matchMedia('(prefers-reduced-motion: no-preference)').matches){c.classList.add('go');return}
+  new IntersectionObserver(function(es){es.forEach(function(e){if(e.intersectionRatio>=.5)c.classList.add('go');else if(e.intersectionRatio===0)c.classList.remove('go')})},{threshold:[0,.5]}).observe(c);
 })();
 </script>
 </body>
