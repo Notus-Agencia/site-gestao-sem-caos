@@ -2722,15 +2722,25 @@ var PRODUTO='Cedo';
 (function(){
   var el=document.getElementById('h1-q');if(!el)return;
   var Q=['Quanto da sua verba de anúncio virou paciente no mês passado?',
-    'O problema é o anúncio ou a conversa de fechamento?',
     'Quanto está parado em orçamentos que ninguém cobrou esta semana?',
     'Quantas pacientes estão no ponto de refazer a toxina e ninguém chamou?',
-    'Qual procedimento paga os anúncios e qual só consome a verba?',
-    'Qual dia da semana a agenda mais fura, e quanto isso custa por mês?',
-    'Qual médica rende mais por hora de agenda, e qual tem horário sobrando?',
     'No ritmo de hoje, a meta do mês fecha ou não?',
     'Quem da equipe precisa agir hoje, e em quê?',
-    'Qual campanha trouxe quem fechou, e qual só trouxe curiosa?'];
+    'Qual campanha trouxe quem fechou, e qual só trouxe curiosa?',
+    'Quantas consultas de amanhã ainda não foram confirmadas?',
+    'Quantos horários vão ficar vazios nos próximos 14 dias, e quanto valem?',
+    'Quantos leads do anúncio estão sem resposta há mais de 2 horas?',
+    'Quantas pacientes vieram uma vez e nunca mais voltaram?',
+    'Quanto a clínica deixou na mesa com faltas no mês passado?',
+    'Qual anúncio parou de trazer paciente e ainda está rodando?',
+    'Quantas pacientes de preenchimento completam 12 meses este mês?',
+    'Qual orçamento vence hoje, e quem está com ele?',
+    'Quanto cada médica faturou por hora de agenda este mês?',
+    'Quanto você gastou para trazer cada paciente que fechou?',
+    'Quem faltou ontem e ainda não foi chamada para remarcar?',
+    'Quantos leads chegaram ontem, e quantos já têm consulta marcada?'];
+  // a primeira fica fixa (é a do HTML); as outras entram em ordem aleatória a cada visita
+  for(var r=Q.length-1;r>1;r--){var j=1+Math.floor(Math.random()*r);var t=Q[r];Q[r]=Q[j];Q[j]=t}
   if(!matchMedia('(prefers-reduced-motion: no-preference)').matches)return;
   // reserva a altura da pergunta mais longa para o título não pular
   var h1=el.parentElement,maior=Q.reduce(function(a,b){return b.length>a.length?b:a});
