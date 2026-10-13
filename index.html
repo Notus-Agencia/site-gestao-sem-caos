@@ -1382,12 +1382,17 @@ button.link-arrow{border:0;background:none;padding:0;cursor:pointer;font-size:in
 .impl-inc{list-style:none;margin:10px 0 14px;padding:0;display:grid;gap:7px;font-size:13.5px;color:var(--ink-2);line-height:1.45}.impl-inc li{padding-left:16px;position:relative}.impl-inc li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--o1)}.impl-inc b{color:var(--ink)}
 
 .h1-q{display:block}
-.h1-cursor{display:inline-block;width:.06em;height:.9em;margin-left:.04em;background:var(--o1);vertical-align:-.08em;animation:h1-blink 1s steps(2) infinite}
+.h1-q{transition:opacity .36s var(--ez),translate .36s var(--ez)}
+.h1-q.off{opacity:0;translate:0 -10px}
+.h1-c{position:relative;visibility:hidden}
+.h1-c.on{visibility:visible}
+.h1-cursor{position:absolute;left:100%;top:.08em;width:.06em;height:.86em;margin-left:.04em;background:var(--o1);visibility:visible;animation:h1-blink 1s steps(2) infinite}
+.h1-cursor.pre{left:auto;right:100%;margin:0 .04em 0 0}
 @keyframes h1-blink{to{opacity:0}}
 @media (prefers-reduced-motion:reduce){.h1-cursor{display:none}}
 .hero-ask{margin:26px 0 0;font:600 17px/1.4 var(--f-body);color:var(--ink-2);max-width:30ch}
 .hero h1#h1{margin-top:10px;font-size:clamp(34px,4vw,54px)}
-.hero-ans{margin:14px 0 0;font:700 clamp(22px,2.2vw,30px)/1.1 var(--f-head);letter-spacing:-.03em}
+.hero-ans{margin:14px 0 0;font:700 clamp(22px,2.2vw,30px)/1.15 var(--f-head);letter-spacing:-.03em;max-width:22ch}
 @media (max-width:760px){.hero-ask{font-size:15.5px;margin-top:18px}.hero h1#h1{font-size:clamp(27px,7.6vw,32px)}.hero-ans{font-size:22px}}
 
 /* comparação: visual novo (branco, navy, laranja vivo na coluna Cedo; marcas em sequência) */
@@ -1483,7 +1488,7 @@ button.link-arrow{border:0;background:none;padding:0;cursor:pointer;font-size:in
       <p class="hero-eyebrow mo-h" style="--mo-d:60ms"><b data-pn>Cedo</b> · para clínicas de estética médica que anunciam todo mês</p>
       <p class="hero-ask mo-h" style="--mo-d:100ms">Quantas dessas perguntas você consegue responder hoje, na sua clínica?</p>
       <h1 id="h1" class="mo-h" style="--mo-d:140ms"><span class="h1-q" id="h1-q">Quanto da sua verba de anúncio virou paciente no mês passado?</span></h1>
-      <p class="hero-ans ember mo-h" style="--mo-d:220ms">O <span data-pn>Cedo</span> responde. Todo dia às 7h.</p>
+      <p class="hero-ans ember mo-h" style="--mo-d:220ms">O <span data-pn>Cedo</span> responde na hora. E todo dia às 7h, sem você perguntar.</p>
       
       
       <div class="hero-cta mo-h" style="--mo-d:300ms">
@@ -2711,30 +2716,40 @@ var PRODUTO='Cedo';
 </script>
 
 <script>
-/* capa: as perguntas que só o Cedo responde, digitadas no título */
+/* capa: as perguntas que só o Cedo responde, digitadas no título.
+   A pergunta inteira é montada de uma vez (uma letra por span, escondidas) e só vai aparecendo:
+   assim a quebra de linha é a final desde o início e não muda enquanto digita. */
 (function(){
   var el=document.getElementById('h1-q');if(!el)return;
   var Q=['Quanto da sua verba de anúncio virou paciente no mês passado?',
-    'Quantas consultas de amanhã ainda não foram confirmadas?',
-    'Quantos horários vão ficar vazios nos próximos 14 dias?',
+    'O problema é o anúncio ou a conversa de fechamento?',
+    'Quanto está parado em orçamentos que ninguém cobrou esta semana?',
     'Quantas pacientes estão no ponto de refazer a toxina e ninguém chamou?',
-    'Quais orçamentos vencem esta semana, e com quem estão?',
-    'Qual anúncio parou de trazer paciente e ainda está rodando?',
-    'Qual médica fatura mais por hora de agenda?',
-    'Quanto falta para a meta do mês, e dá tempo no ritmo de hoje?'];
+    'Qual procedimento paga os anúncios e qual só consome a verba?',
+    'Qual dia da semana a agenda mais fura, e quanto isso custa por mês?',
+    'Qual médica rende mais por hora de agenda, e qual tem horário sobrando?',
+    'No ritmo de hoje, a meta do mês fecha ou não?',
+    'Quem da equipe precisa agir hoje, e em quê?',
+    'Qual campanha trouxe quem fechou, e qual só trouxe curiosa?'];
   if(!matchMedia('(prefers-reduced-motion: no-preference)').matches)return;
   // reserva a altura da pergunta mais longa para o título não pular
   var h1=el.parentElement,maior=Q.reduce(function(a,b){return b.length>a.length?b:a});
-  function reserva(){var t=el.textContent;h1.style.minHeight='';el.textContent=maior;h1.style.minHeight=h1.getBoundingClientRect().height+'px';el.textContent=t}
+  function reserva(){var t=el.innerHTML;h1.style.minHeight='';el.textContent=maior;h1.style.minHeight=h1.getBoundingClientRect().height+'px';el.innerHTML=t}
   reserva();addEventListener('resize',reserva);
   var cur=document.createElement('span');cur.className='h1-cursor';cur.setAttribute('aria-hidden','true');
+  function monta(txt){el.textContent='';var f=document.createDocumentFragment(),sp=[];
+    for(var i=0;i<txt.length;i++){var c=document.createElement('span');c.className='h1-c';c.textContent=txt[i];f.appendChild(c);sp.push(c)}
+    el.appendChild(f);return sp}
   var i=0,parado=false;document.addEventListener('visibilitychange',function(){parado=document.hidden});
-  function escreve(txt,k,fim){if(parado){setTimeout(function(){escreve(txt,k,fim)},400);return}
-    el.textContent=txt.slice(0,k);el.appendChild(cur);if(k<txt.length)setTimeout(function(){escreve(txt,k+1,fim)},55+Math.random()*45);else fim()}
-  function apaga(txt,k,fim){el.textContent=txt.slice(0,k);el.appendChild(cur);if(k>0)setTimeout(function(){apaga(txt,k-1,fim)},16);else fim()}
-  function ciclo(){var txt=Q[i];escreve(txt,el.textContent.length<=txt.length&&txt.indexOf(el.textContent)===0?el.textContent.length:0,function(){
-    setTimeout(function(){apaga(txt,txt.length,function(){i=(i+1)%Q.length;ciclo()})},5200)})}
-  el.appendChild(cur);setTimeout(ciclo,900);
+  function escreve(sp,k,fim){if(parado){setTimeout(function(){escreve(sp,k,fim)},400);return}
+    if(k<sp.length){sp[k].classList.add('on');sp[k].appendChild(cur);cur.classList.remove('pre');setTimeout(function(){escreve(sp,k+1,fim)},55+Math.random()*45)}else fim()}
+  function some(fim){el.classList.add('off');setTimeout(fim,380)}
+  function volta(){el.style.transition='none';el.classList.remove('off');void el.offsetWidth;el.style.transition=''}
+  function proxima(){i=(i+1)%Q.length;var sp=monta(Q[i]);volta();sp[0].appendChild(cur);cur.classList.add('pre');
+    escreve(sp,0,function(){setTimeout(function(){some(proxima)},5200)})}
+  // a primeira já vem escrita no HTML: só ganha o cursor e espera
+  var sp0=monta(Q[0]);sp0.forEach(function(c){c.classList.add('on')});sp0[sp0.length-1].appendChild(cur);
+  setTimeout(function(){some(proxima)},4200);
 })();
 </script>
 
